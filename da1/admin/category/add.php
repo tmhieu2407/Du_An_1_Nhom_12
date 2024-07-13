@@ -14,7 +14,7 @@
             <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="index.php" class="d-block">BDT Fashion</a>
+            <a href="index.php" class="d-block">BDTc Fashion</a>
           </div>
         </div>
 
