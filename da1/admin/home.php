@@ -69,7 +69,7 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="index.php?act=adduser" class="nav-link">
+                  <a href="index.php?act=listuser" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Khách Hàng</p>
                   </a>

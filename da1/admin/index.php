@@ -2,6 +2,7 @@
 include "../models/pdo.php";
 include "../models/category.php";
 include "../models/products.php";
+include "../models/account.php";
 include "header.php";
 
 if(isset($_GET['act'])){
@@ -100,6 +101,11 @@ if(isset($_GET['act'])){
                 }
                 $listsp = loadAll_products();
                 include "products/list.php";
+                break;
+
+            case 'listuser':
+                $listuser = loadAll_user();
+                include "account/list.php";
                 break;
     
         default:
