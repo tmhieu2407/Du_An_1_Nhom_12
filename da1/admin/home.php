@@ -74,12 +74,6 @@
                     <p>Khách Hàng</p>
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a href="index.php?act=addpq" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Phân Quyền</p>
-                  </a>
-                </li>
               </ul>
             </li>
           </ul>

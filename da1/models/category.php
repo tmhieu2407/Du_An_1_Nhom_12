@@ -18,8 +18,8 @@
         $dm=pdo_query_one($sql);
         return $dm;
     }
-    function update_category($id, $tenloai){
-        $sql="update catalog set name='".$tenloai."' where id_cata".$id;
+    function update_category($id_cata, $tenloai){
+        $sql="update catalog set name='".$tenloai."' where id_cata=".$id_cata;
         pdo_execute($sql);
     }
 ?>

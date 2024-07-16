@@ -99,7 +99,7 @@
         <input type="text" name="tenloai" class="form-control" placeholder="TÊN DANH MỤC" value="<?php if(isset($name) && ($name!="")) echo $name ?>">
     </div>
     <div class="card-body">
-        <input type="hidden" name="id_cata" value="<?php if(isset($id) && ($id>0)) echo $id?>">
+        <input type="hidden" name="id_cata" value="<?php if(isset($id_cata) && ($id_cata>0)) echo $id_cata?>">
         <input type="submit"  class="btn btn-primary" name="capnhat" value="Cập Nhật">    
     </div>
     <?php

@@ -90,7 +90,7 @@
 </aside>
 <div class="main" style="margin-left:260px;">
   <h1>Danh Sách Sản Phẩm</h1>
-  <div class="col-12">
+  <div class="col-12" style="margin-bottom:20px">
   <a href="index.php?act=addsp"><input type="submit"  class="btn btn-primary" name="themmoi" value="Thêm Mới"></a>
   </div>
 

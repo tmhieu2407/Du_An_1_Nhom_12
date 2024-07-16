@@ -37,8 +37,8 @@ if(isset($_GET['act'])){
         case 'updatedm':
             if(isset($_POST['capnhat']) && ($_POST['capnhat'])){
                 $tenloai = $_POST['tenloai'];
-                $id = $_POST['id'];
-                update_category($id, $tenloai);
+                $id_cata = $_POST['id_cata'];
+                update_category($id_cata, $tenloai);
                 $thongbao="Cập nhật thành công";
             }
             $listdm = loadAll_category();

@@ -108,7 +108,7 @@
       </div>
       <div class="form-group">
         <label for="exampleInputEmail1">Date</label>
-        <input type="text" name="date" class="form-control" placeholder="Ngày Nhập Sản Phẩm">
+        <input type="date" name="date" class="form-control" placeholder="Ngày Nhập Sản Phẩm">
       </div>
       <div class="form-group">
         <label for="exampleInputEmail1">Views</label>
