@@ -5,12 +5,19 @@
              values ('$name', '$price', '$filename', '$date', '$view', '$description', '$id_cata')";
         pdo_execute($sql);
     }
-    function delete_products($id){
-        $sql="delete from products where id_cata=".$id;
+    function delete_products($id_sp){
+        $sql="delete from products where id_sp=".$id_sp;
         pdo_execute($sql);
     }
-    function loadAll_products(){
-        $sql="select * from products order by id_cata ASC"; 
+    function loadAll_products($key,  $id_cata){
+        $sql="select * from products where 1";
+        if($key!=""){
+            $sql.=" and name like '%".$key."%'";
+        }
+        if($id_cata>0){
+            $sql.=" and id_cata ='".$id_cata."'";
+        }
+        $sql.=" order by id_cata ASC"; 
         $listsp=pdo_query($sql);
         return $listsp;
     }

@@ -37,7 +37,7 @@ if(isset($_GET['act'])){
         case 'updatedm':
             if(isset($_POST['capnhat']) && ($_POST['capnhat'])){
                 $tenloai = $_POST['tenloai'];
-                $id = $_POST['id_cata'];
+                $id = $_POST['id'];
                 update_category($id, $tenloai);
                 $thongbao="Cập nhật thành công";
             }
@@ -74,14 +74,22 @@ if(isset($_GET['act'])){
                 include "products/add.php";
                 break;
             case 'listsp':
-                $listsp = loadAll_products();
+                if(isset($_POST['submit']) && ($_POST['submit'])){
+                    $key = $_POST['key'];
+                    $id_cata = $_POST['id_cata'];
+                }else{
+                    $key = '';
+                    $id_cata = 0;
+                }
+                $listdm = loadAll_category();
+                $listsp = loadAll_products($key,  $id_cata);
                 include "products/list.php";
                 break;
             case 'deletesp':
                 if(isset($_GET['id'])&&($_GET['id']>0)){
                     delete_products($_GET['id']);
                 }
-                $listsp = loadAll_products();
+                $listsp = loadAll_products("",0);
                 include "products/list.php";
                 break;   
     
@@ -98,7 +106,7 @@ if(isset($_GET['act'])){
                     update_products($id, $tenloai);
                     $thongbao="Cập nhật thành công";
                 }
-                $listsp = loadAll_products();
+                $listsp = loadAll_products('', 0);
                 include "products/list.php";
                 break;
     
