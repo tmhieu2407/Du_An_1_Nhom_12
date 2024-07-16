@@ -91,7 +91,7 @@
 <form action="index.php?act=adddm" method="post" style="margin-left:260px;">
     <h1>Thêm Danh Mục</h1>
     <div class="card-body">
-        <input type="text" name="tenloai" class="form-control" placeholder="TÊN DANH MỤC">
+        <input type="text" name="tenloai" class="form-control" placeholder="TÊN DANHslo MỤC">
     </div>
     <div class="card-body">
         <input type="submit"  class="btn btn-primary" name="themmoi" value="Thêm Mới">   
