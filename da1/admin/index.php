@@ -2,6 +2,7 @@
 include "../models/pdo.php";
 include "../models/category.php";
 include "../models/products.php";
+include "navbar.php";
 include "header.php";
 
 if(isset($_GET['act'])){

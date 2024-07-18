@@ -22,12 +22,12 @@
         return $listsp;
     }
     function loadOnce_products($id){
-        $sql="select * from products where id_cata=".$id;
+        $sql="select * from products where id_sp=".$id;
         $sp=pdo_query_one($sql);
         return $sp;
     }
     function update_products($id, $tenloai){
-        $sql="update products set name='".$tenloai."' where id_cata".$id;
+        $sql="update products set name='".$tenloai."' where id_sp=".$id;
         pdo_execute($sql);
     }
 ?>
