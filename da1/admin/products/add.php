@@ -26,7 +26,7 @@
       </div>
       <div class="form-group">
         <label for="exampleInputEmail1">Description</label>
-        <textarea name="description" cols="30" rows="10"></textarea>
+        <input type="text" name="moTa"  class="form-control datetimepicker-input" id="exampleInputEmail1" placeholder="">
       </div>
       <div class="form-group">
         <label for="exampleInputEmail1">Category</label>
@@ -42,7 +42,7 @@
     </div>
     
     <div class="card-body">
-        <input type="submit"  class="btn btn-primary" name="themmoi" value="Thêm Mới">   
-        <a href="index.php?act=listsp"><input type="button"  class="btn btn-success" name="danhsach" value="Danh Sách"></a>
+        <input type="submit"  class="btn btn-primary" name="themmoi" value="Thêm Mới" style="margin-bottom:20px;">   
+        <a href="index.php?act=listsp"><input type="button"  class="btn btn-success" name="danhsach" value="Danh Sách" style="margin-bottom:20px;"></a>
     </div>
 </form>
