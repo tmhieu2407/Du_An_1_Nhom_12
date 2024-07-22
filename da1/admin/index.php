@@ -2,6 +2,7 @@
 include "../models/pdo.php";
 include "../models/category.php";
 include "../models/products.php";
+include "../models/user.php";
 include "navbar.php";
 include "header.php";
 
@@ -131,6 +132,26 @@ if (isset($_GET['act'])) {
             include "products/list.php";
             break;
 
+            case'adduser':
+                if (isset($_POST['themmoi']) && $_POST['themmoi']) {
+                    $username = $_POST['username'];
+                    $password = $_POST['password'];
+                    $ho_ten = $_POST['ho_ten'];
+                    $email = $_POST['email'];
+                    $phone = $_POST['phone'];
+                    $role = $_POST['role'];
+                    $address = $_POST['address'];
+                    insert_user($username, $password, $ho_ten, $email, $phone, $role, $address);
+                    $thongbao = "Thêm thành công";
+                }
+                $listuser = loadAll_user();
+                include "user/add.php";
+                break;
+            case 'listuser':
+                $listuser = loadAll_user();
+                
+                include "user/list.php";
+                break;
         default:
             include "home.php";
             break;
