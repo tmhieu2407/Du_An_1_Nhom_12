@@ -61,7 +61,7 @@
                                     </ul>
                                 </div>                                
                                 <div class="money">USD <i class="fa fa-usd"></i></div>
-                                <div class="account"><a href="#">My Account <i class="fa fa-user"></i></a></div>
+                                <div class="account"><a href="index.php?act=dangky">My Account <i class="fa fa-user"></i></a></div>
                             </div>
                         </div>
                     </div>
@@ -73,7 +73,7 @@
                 <div class="container clearfix" id="site-header-inner">
                     <div id="logo" class="logo float-left">
                         <a href="index.html" title="logo">
-                            <img src="images/logo.png" alt="image" width="107" height="24" data-retina="images/logo@2x.png" data-width="107" data-height="24">
+                            <img src="./pub/images/logo.png" alt="image" width="107" height="24" data-retina="./pub/images/logo@2x.png" data-width="107" data-height="24">
                         </a>
                     </div><!-- /.logo -->
                     <div class="mobile-button"><span></span></div>
@@ -86,7 +86,7 @@
                             </form>
                         </li>
                         <li class="box-login">
-                            <a class="icon_login" href="#"></a>
+                            <a class="icon_login" href="index.php?act=dangnhap"></a>
                         </li>
                         <li class="box-cart nav-top-cart-wrapper">
                             <a class="icon_cart nav-cart-trigger active" href="#"><span>3</span></a>

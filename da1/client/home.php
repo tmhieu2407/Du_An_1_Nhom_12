@@ -1,7 +1,3 @@
-<?php
-include "header.php";
-
-?>
         <!-- SLIDER -->
         <div class="rev_slider_wrapper fullwidthbanner-container">
             <div id="rev-slider2" class="rev_slider fullwidthabanner">
@@ -9,7 +5,7 @@ include "header.php";
                     <!-- Slide 1 -->
                     <li data-transition="random">
                        <!-- Main Image -->
-                       <img src="images/slider/slider-bg-3.jpg" alt="" data-bgposition="center center" data-no-retina>
+                       <img src="./pub/images/slider/slider-bg-3.jpg" alt="" data-bgposition="center center" data-no-retina>
                       
                        <!-- Layers -->
                        <div class="tp-caption tp-resizeme text-6e6 font-weight-500 letter-spacing-08"
@@ -95,7 +91,7 @@ include "header.php";
                     <!-- Slide 2 -->
                     <li data-transition="random">
                         <!-- Main Image -->
-                        <img src="images/slider/slider-bg-5.jpg" alt="" data-bgposition="center center" data-no-retina>
+                        <img src="./pub/images/slider/slider-bg-5.jpg" alt="" data-bgposition="center center" data-no-retina>
                        
                         <!-- Layers -->
                         <div class="tp-caption tp-resizeme text-white font-weight-300"
@@ -193,7 +189,7 @@ include "header.php";
                                     <div class="item data-effect-item">
                                         <div class="inner">
                                             <div class="thumb">
-                                                <img src="images/image-box/imgbox-1-370x270.jpg" alt="Image">
+                                                <img src="./pub/images/image-box/imgbox-1-370x270.jpg" alt="Image">
                                                 <div class="elm-btn">
                                                     <a href="#" class="themesflat-button bg-white width-150">For Men’s</a>
                                                 </div>
@@ -204,7 +200,7 @@ include "header.php";
                                     <div class="item data-effect-item">
                                         <div class="inner">
                                             <div class="thumb">
-                                                <img src="images/image-box/imgbox-2-370x270.jpg" alt="Image">
+                                                <img src="./pub/images/image-box/imgbox-2-370x270.jpg" alt="Image">
                                                 <div class="elm-btn">
                                                     <a href="#" class="themesflat-button bg-white width-150">For Kid’s</a>
                                                 </div>
@@ -215,7 +211,7 @@ include "header.php";
                                     <div class="item data-effect-item">
                                         <div class="inner">
                                             <div class="thumb">
-                                                <img src="images/image-box/imgbox-3-370x270.jpg" alt="Image">
+                                                <img src="./pub/images/image-box/imgbox-3-370x270.jpg" alt="Image">
                                                 <div class="elm-btn">
                                                     <a href="#" class="themesflat-button bg-white width-150">For woMen’s</a>
                                                 </div>
@@ -226,7 +222,7 @@ include "header.php";
                                     <div class="item data-effect-item">
                                         <div class="inner">
                                             <div class="thumb">
-                                                <img src="images/image-box/imgbox-1-370x270.jpg" alt="Image">
+                                                <img src="./pub/images/image-box/imgbox-1-370x270.jpg" alt="Image">
                                                 <div class="elm-btn">
                                                     <a href="#" class="themesflat-button bg-white width-150">For Men’s</a>
                                                 </div>
@@ -237,7 +233,7 @@ include "header.php";
                                     <div class="item data-effect-item">
                                         <div class="inner">
                                             <div class="thumb">
-                                                <img src="images/image-box/imgbox-2-370x270.jpg" alt="Image">
+                                                <img src="./pub/images/image-box/imgbox-2-370x270.jpg" alt="Image">
                                                 <div class="elm-btn">
                                                     <a href="#" class="themesflat-button bg-white width-150">For Kid’s</a>
                                                 </div>
@@ -248,7 +244,7 @@ include "header.php";
                                     <div class="item data-effect-item">
                                         <div class="inner">
                                             <div class="thumb">
-                                                <img src="images/image-box/imgbox-3-370x270.jpg" alt="Image">
+                                                <img src="./pub/images/image-box/imgbox-3-370x270.jpg" alt="Image">
                                                 <div class="elm-btn">
                                                     <a href="#" class="themesflat-button bg-white width-150">For woMen’s</a>
                                                 </div>
@@ -286,7 +282,7 @@ include "header.php";
                                 <li class="product-item kid woman">
                                     <div class="product-thumb clearfix">
                                         <a href="#">
-                                            <img src="images/shop/sh-4/1.jpg" alt="image">
+                                            <img src="./pub/images/shop/sh-4/1.jpg" alt="image">
                                         </a>
                                     </div>
                                     <div class="product-info clearfix">
@@ -316,7 +312,7 @@ include "header.php";
                                 <li class="product-item man accessories">
                                     <div class="product-thumb clearfix">
                                         <a href="#">
-                                            <img src="images/shop/sh-4/2.jpg" alt="image">
+                                            <img src="./pub/images/shop/sh-4/2.jpg" alt="image">
                                         </a>
                                         <span class="new">New</span>
                                     </div>
@@ -336,7 +332,7 @@ include "header.php";
                                 <li class="product-item kid woman">
                                     <div class="product-thumb clearfix">
                                         <a href="#" class="product-thumb">
-                                            <img src="images/shop/sh-4/3.jpg" alt="image">
+                                            <img src="./pub/images/shop/sh-4/3.jpg" alt="image">
                                         </a>
                                     </div>
                                     <div class="product-info clearfix">
@@ -355,7 +351,7 @@ include "header.php";
                                 <li class="product-item man accessories">
                                     <div class="product-thumb clearfix">
                                         <a href="#" class="product-thumb">
-                                            <img src="images/shop/sh-4/4.jpg" alt="image">
+                                            <img src="./pub/images/shop/sh-4/4.jpg" alt="image">
                                         </a>
                                         <span class="new sale">Sale</span>
                                     </div>
@@ -389,7 +385,7 @@ include "header.php";
                                 <li class="product-item kid woman">
                                     <div class="product-thumb clearfix">
                                         <a href="#" class="product-thumb">
-                                            <img src="images/shop/sh-4/5.jpg" alt="image">
+                                            <img src="./pub/images/shop/sh-4/5.jpg" alt="image">
                                         </a>
                                         <span class="new">New</span>
                                     </div>
@@ -409,7 +405,7 @@ include "header.php";
                                 <li class="product-item man accessories">
                                     <div class="product-thumb clearfix">
                                         <a href="#" class="product-thumb">
-                                            <img src="images/shop/sh-4/6.jpg" alt="image">
+                                            <img src="./pub/images/shop/sh-4/6.jpg" alt="image">
                                         </a>
                                         <span class="new sale">Sale</span>
                                     </div>
@@ -443,7 +439,7 @@ include "header.php";
                                 <li class="product-item kid woman">
                                     <div class="product-thumb clearfix">
                                         <a href="#" class="product-thumb">
-                                            <img src="images/shop/sh-4/7.jpg" alt="image">
+                                            <img src="./pub/images/shop/sh-4/7.jpg" alt="image">
                                         </a>
                                     </div>
                                     <div class="product-info clearfix">
@@ -462,7 +458,7 @@ include "header.php";
                                 <li class="product-item man accessories">
                                     <div class="product-thumb clearfix">
                                         <a href="#" class="product-thumb">
-                                            <img src="images/shop/sh-4/8.jpg" alt="image">
+                                            <img src="./pub/images/shop/sh-4/8.jpg" alt="image">
                                         </a>
                                         <span class="new">New</span>
                                     </div>
@@ -530,7 +526,7 @@ include "header.php";
                                 <li class="product-item">
                                     <div class="product-thumb clearfix">
                                         <a href="#">
-                                            <img src="images/shop/sh-5/1.jpg" alt="image">
+                                            <img src="./pub/images/shop/sh-5/1.jpg" alt="image">
                                         </a>
                                         <span class="new sale">Sale</span>
                                     </div>
@@ -553,7 +549,7 @@ include "header.php";
                                 <li class="product-item">
                                     <div class="product-thumb clearfix">
                                         <a href="#">
-                                            <img src="images/shop/sh-5/2.jpg" alt="image">
+                                            <img src="./pub/images/shop/sh-5/2.jpg" alt="image">
                                         </a>
                                         <span class="new">New</span>
                                     </div>
@@ -584,7 +580,7 @@ include "header.php";
                                 <li class="product-item">
                                     <div class="product-thumb clearfix">
                                         <a href="#">
-                                            <img src="images/shop/sh-5/3.jpg" alt="image">
+                                            <img src="./pub/images/shop/sh-5/3.jpg" alt="image">
                                         </a>
                                         <span class="new">New</span>
                                     </div>
@@ -604,7 +600,7 @@ include "header.php";
                                 <li class="product-item">
                                     <div class="product-thumb clearfix">
                                         <a href="#">
-                                            <img src="images/shop/sh-5/4.jpg" alt="image">
+                                            <img src="./pub/images/shop/sh-5/4.jpg" alt="image">
                                         </a>
                                         <span class="new sale">Sale</span>
                                     </div>
@@ -627,7 +623,7 @@ include "header.php";
                                 <li class="product-item">
                                     <div class="product-thumb clearfix">
                                         <a href="#">
-                                            <img src="images/shop/sh-5/5.jpg" alt="image">
+                                            <img src="./pub/images/shop/sh-5/5.jpg" alt="image">
                                         </a>
                                         <span class="new sale">Sale</span>
                                     </div>
@@ -740,7 +736,7 @@ include "header.php";
                                 <div class="owl-carousel owl-theme">
                                     <article class="post clearfix">
                                         <div class="featured-post data-effect-item">
-                                            <img src="images/blog/new-lastest-4-370x280.jpg" alt="image">
+                                            <img src="./pub/images/blog/new-lastest-4-370x280.jpg" alt="image">
                                             <div class="overlay-effect bg-overlay-black opacity02"></div>
                                         </div> 
                                         <div class="content-post">                                        
@@ -764,7 +760,7 @@ include "header.php";
                                     </article><!-- /.post -->
                                     <article class="post clearfix ">
                                         <div class="featured-post data-effect-item">
-                                            <img src="images/blog/new-lastest-5-370x280.jpg" alt="image">
+                                            <img src="./pub/images/blog/new-lastest-5-370x280.jpg" alt="image">
                                             <div class="overlay-effect bg-overlay-black opacity02"></div>
                                         </div> 
                                         <div class="content-post">                                        
@@ -788,7 +784,7 @@ include "header.php";
                                     </article><!-- /.post -->
                                     <article class="post clearfix">
                                         <div class="featured-post data-effect-item">
-                                            <img src="images/blog/new-lastest-6-370x280.jpg" alt="image">
+                                            <img src="./pub/images/blog/new-lastest-6-370x280.jpg" alt="image">
                                             <div class="overlay-effect bg-overlay-black opacity02"></div>
                                         </div> 
                                         <div class="content-post">                                        
@@ -812,7 +808,7 @@ include "header.php";
                                     </article><!-- /.post --> 
                                     <article class="post clearfix">
                                         <div class="featured-post data-effect-item">
-                                            <img src="images/blog/new-lastest-4-370x280.jpg" alt="image">
+                                            <img src="./pub/images/blog/new-lastest-4-370x280.jpg" alt="image">
                                             <div class="overlay-effect bg-overlay-black opacity02"></div>
                                         </div> 
                                         <div class="content-post">                                        
@@ -836,7 +832,7 @@ include "header.php";
                                     </article><!-- /.post -->
                                     <article class="post clearfix">
                                         <div class="featured-post data-effect-item">
-                                            <img src="images/blog/new-lastest-5-370x280.jpg" alt="image">
+                                            <img src="./pub/images/blog/new-lastest-5-370x280.jpg" alt="image">
                                             <div class="overlay-effect bg-overlay-black opacity02"></div>
                                         </div> 
                                         <div class="content-post">                                        
@@ -860,7 +856,7 @@ include "header.php";
                                     </article><!-- /.post -->
                                     <article class="post clearfix">
                                         <div class="featured-post data-effect-item">
-                                            <img src="images/blog/new-lastest-6-370x280.jpg" alt="image">
+                                            <img src="./pub/images/blog/new-lastest-6-370x280.jpg" alt="image">
                                             <div class="overlay-effect bg-overlay-black opacity02"></div>
                                         </div> 
                                         <div class="content-post">                                        
@@ -923,112 +919,3 @@ include "header.php";
                 </div>
             </div>
         </section><!-- /.mail-chimp -->
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-md-3">
-                        <div class="widget widget-link">
-                            <ul>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Online Store</a></li>
-                                <li><a href="blog-list.html">Blog</a></li>
-                                <li><a href="contact.html">Contact Us</a></li>
-                            </ul>
-                        </div><!-- /.widget -->
-                    </div><!-- /.col-md-3 -->
-                    <div class="col-sm-6 col-md-3">
-                        <div class="widget widget-link link-login">
-                            <ul>
-                                <li><a href="#">Login/ Register</a></li>
-                                <li><a href="#">Your Cart</a></li>
-                                <li><a href="#">Wishlist items</a></li>
-                                <li><a href="#">Your checkout</a></li>
-                            </ul>
-                        </div><!-- /.widget -->
-                    </div><!-- /.col-md-3 -->
-                    <div class="col-sm-6 col-md-3">
-                        <div class="widget widget-link link-faq">
-                            <ul>
-                                <li><a href="faqs.html">FAQs</a></li>
-                                <li><a href="#">Term of service</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Returns</a></li>
-                            </ul>
-                        </div><!-- /.widget -->
-                    </div><!-- /.col-md-3 -->
-                    <div class="col-sm-6 col-md-3">
-                        <div class="widget widget-brand">
-							<div class="logo logo-footer">
-								<a href="index.html"><img src="images/logo%402x.png" alt="image" width="107" height="24"></a>
-							</div>
-                            <ul class="flat-contact">
-                                <li class="address">112 Kingdom, NA 12, New York</li>
-                                <li class="phone">+12 345 678 910</li>
-                                <li class="email">infor.deercreative@gmail.com</li>
-                            </ul><!-- /.flat-contact -->
-                        </div><!-- /.widget -->
-                    </div><!-- /.col-md-3 -->
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-        </footer><!-- /.footer -->
-
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <p class="copyright text-center">Copyright @2018 <a href="#">Modaz</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Go Top -->
-        <a class="go-top">
-            <i class="fa fa-chevron-up"></i>
-        </a>  
-
-    </div>
-
-    <!-- Javascript -->
-    <script src="javascript/jquery.min.js"></script>
-    <script src="javascript/tether.min.js"></script>
-    <script src="javascript/bootstrap.min.js"></script> 
-    <script src="javascript/jquery.easing.js"></script>    
-    <script src="javascript/parallax.js"></script>
-    <script src="javascript/jquery-waypoints.js"></script>
-    <script src="javascript/jquery-countTo.js"></script>
-    <script src="javascript/jquery.countdown.js"></script>
-    <script src="javascript/jquery.flexslider-min.js"></script>
-    <script src="javascript/images-loaded.js"></script>
-    <script src="javascript/jquery.isotope.min.js"></script>
-    <script src="javascript/magnific.popup.min.js"></script>
-    <script src="javascript/jquery.hoverdir.js"></script>
-    <script src="javascript/owl.carousel.min.js"></script>
-    <script src="javascript/equalize.min.js"></script>
-    <script src="javascript/gmap3.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIEU6OT3xqCksCetQeNLIPps6-AYrhq-s&amp;region=GB"></script>
-    <script src="javascript/jquery-ui.js"></script>
-    <script src="javascript/switcher.js"></script>
-    <script src="javascript/jquery.cookie.js"></script>
-    <script src="javascript/main.js"></script>
-
-    <!-- Revolution Slider -->
-    <script src="rev-slider/js/jquery.themepunch.tools.min.js"></script>
-    <script src="rev-slider/js/jquery.themepunch.revolution.min.js"></script>
-    <script src="javascript/rev-slider.js"></script>
-    <!-- Load Extensions only on Local File Systems ! The following part can be removed on Server for On Demand Loading -->  
-    <script src="rev-slider/js/extensions/revolution.extension.actions.min.js"></script>
-    <script src="rev-slider/js/extensions/revolution.extension.carousel.min.js"></script>
-    <script src="rev-slider/js/extensions/revolution.extension.kenburn.min.js"></script>
-    <script src="rev-slider/js/extensions/revolution.extension.layeranimation.min.js"></script>
-    <script src="rev-slider/js/extensions/revolution.extension.migration.min.js"></script>
-    <script src="rev-slider/js/extensions/revolution.extension.navigation.min.js"></script>
-    <script src="rev-slider/js/extensions/revolution.extension.parallax.min.js"></script>
-    <script src="rev-slider/js/extensions/revolution.extension.slideanims.min.js"></script>
-    <script src="rev-slider/js/extensions/revolution.extension.video.min.js"></script>
-</body> 
-
-<!-- Mirrored from themesflat.co/html/modaz/index-v2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 29 Jun 2024 00:52:31 GMT -->
-</html>                               
