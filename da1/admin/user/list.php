@@ -20,8 +20,8 @@
   <?php
     foreach ($listuser as $user) {
       extract($user);
-      $update="index.php?act=update&id=".$id_user;
-      $delete="index.php?act=delete&id=".$id_user;
+      $updateuser="index.php?act=updateuser&id=".$id_user;
+      $deleteuser="index.php?act=deleteuser&id=".$id_user;
       echo '<tr>
         <th scope="row">'.$id_user.'</th>
         <td>'.$username.'</td>
@@ -32,8 +32,8 @@
         <td>'.$role.'</td>
         <td>'.$address.'</td>
         <td>
-          <a href="'.$update.'"><input type="button" class="btn btn-success" value="Sửa"></a>
-          <a href="'.$delete.'"><input type="button" class="btn btn-warning" value="Xoá"></a>
+          <a href="'.$updateuser.'"><input type="button" class="btn btn-success" value="Sửa"></a>
+          <a href="'.$deleteuser.'"><input type="button" class="btn btn-warning" value="Xoá"></a>
         </td>
       </tr>';
     }

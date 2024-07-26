@@ -2,7 +2,7 @@
 if (is_array($sp)) {
     extract($sp);
 }
-$image_path = "../upload/" . $image;
+$image_path = "../admin/upload/" . $image;
 $image_display = (is_file($image_path)) ? "<img src='$image_path' height='100' alt='Product Image'>" : "No Photo";
 ?>
 
