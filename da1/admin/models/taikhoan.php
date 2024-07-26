@@ -29,8 +29,9 @@
         $us=pdo_query_one($sql);
         return $us;
     }
-    function update_user($id_user, $username){
-        $sql="update user set name='".$username."' where id_cata=".$id_user;
+    function update_taikhoan($id_user, $username, $password, $ho_ten, $email, $phone, $role, $address){
+        $sql="update user set username='".$username."',  password='".$password."',  ho_ten='".$ho_ten."',  email='".$email."',
+                phone='".$phone."', role='".$role."', address='".$address."' where id_user=".$id_user;
         pdo_execute($sql);
         
     }

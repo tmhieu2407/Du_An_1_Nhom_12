@@ -38,7 +38,7 @@
         <input type="text" class="form-control" name="address" id="exampleInputPassword1">
     </div>
     <input type="submit"  class="btn btn-success" name="dangky" value="Đăng Ký">
-    <a href="index.php?act=dangnhap"><input type="button"  class="btn btn-success" name="dangnhap" value="Đăng Nhập">
+    <input type="reset"  class="btn btn-success" name="nhaplai" value="Nhập Lại">
 </form>
 <h2 class="thongbao" style="color:red;">
 

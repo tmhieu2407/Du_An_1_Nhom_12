@@ -61,7 +61,8 @@
                                     </ul>
                                 </div>                                
                                 <div class="money">USD <i class="fa fa-usd"></i></div>
-                                <div class="account"><a href="index.php?act=dangky">My Account <i class="fa fa-user"></i></a></div>
+                                <div class="account"><a href="index.php?act=dangnhap">Log in <i class="fa fa-user"></i></a></div>
+                                <div class="account"><a href="index.php?act=dangky">Log out <i class="fa fa-user"></i></a></div>
                             </div>
                         </div>
                     </div>
