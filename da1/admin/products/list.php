@@ -37,7 +37,7 @@
       extract($products);
       $updatesp="index.php?act=updatesp&id=".$id_sp;
       $deletesp="index.php?act=deletesp&id=".$id_sp;
-      $image = "../upload/".$image;
+      $image = "../admin/upload/".$image;
       if(is_file($image)){
         $image ="<img src='".$image."' height= '100'>"; 
       }else{
