@@ -3,6 +3,7 @@ include "../admin/models/pdo.php";
 include "../admin/models/category.php";
 include "../admin/models/products.php";
 include "../admin/models/user.php";
+include "../admin/models/comment.php";
 include "navbar.php";
 include "header.php";
 
@@ -174,6 +175,18 @@ if (isset($_GET['act'])) {
                 }
                 $listuser = loadAll_user();
                 include "user/list.php";
+                break;
+            case 'addcmt':
+                if (isset($_POST['themmoi']) && $_POST['themmoi']) {
+                    $content = $_POST['content'];
+                    insert_category($content);
+                    $thongbao = "Thêm thành công";
+                }
+                include "comment/add.php";
+                break;
+            case 'listcmt':
+                $listcmt = loadAll_comment();
+                include "comment/list.php";
                 break;
         default:
             include "home.php";
