@@ -15,17 +15,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- Bootstrap  -->
-    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css" >
+    <link rel="stylesheet" type="text/css" href="./pub/stylesheets/bootstrap.css" >
 
     <!-- Theme Style -->
-    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/responsive.css">
+    <link rel="stylesheet" type="text/css" href="./pub/stylesheets/style.css">
+    <link rel="stylesheet" type="text/css" href="./pub/stylesheets/responsive.css">
 
     <!-- Colors -->
-    <link rel="stylesheet" type="text/css" href="stylesheets/colors/color1.css" id="colors">
+    <link rel="stylesheet" type="text/css" href="./pub/stylesheets/colors/color1.css" id="colors">
 
     <!-- Animation Style -->
-    <link rel="stylesheet" type="text/css" href="stylesheets/animate.css">
+    <link rel="stylesheet" type="text/css" href="./pub/stylesheets/animate.css">
 
 
     <!-- Favicon and touch icons  -->
@@ -37,12 +37,7 @@
     <![endif]-->
 </head> 
 <body class="header_sticky header-style-1 topbar-style-1 has-menu-extra">
-	<!-- Preloader -->
-    <div id="loading-overlay">
-        <div class="loader"></div>
-    </div>
-
-    <!-- Boxed -->
+	 <!-- Boxed -->
     <div class="boxed">
         <div id="site-header-wrap">
             <!-- Top Bar -->
@@ -183,3 +178,4 @@
                     </div><!-- /.nav-wrap -->
                 </div><!-- /.container-fluid -->
             </header><!-- /header -->
+        </div><!-- /#site-header-wrap -->
