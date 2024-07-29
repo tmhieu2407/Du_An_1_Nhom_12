@@ -178,8 +178,8 @@ if (isset($_GET['act'])) {
                 break;
             case 'addcmt':
                 if (isset($_POST['themmoi']) && $_POST['themmoi']) {
-                    $content = $_POST['content'];
-                    insert_category($content);
+                    $tenloai = $_POST['content'];
+                    insert_comment($tenloai);
                     $thongbao = "Thêm thành công";
                 }
                 include "comment/add.php";
@@ -197,4 +197,4 @@ if (isset($_GET['act'])) {
 }
 
 include "footer.php";
-?>--
+?>

@@ -5,7 +5,7 @@
             <input type="text" name="content" class="form-control" placeholder="Nội Dung">  
         </div>
         <div class="form-group">
-            <input type="text" name="content" class="form-control" placeholder="Nội Dung">  
+            <input type="text" name="date" class="form-control" placeholder="Nội Dung">  
         </div>
     </div>
     <div class="card-body">
