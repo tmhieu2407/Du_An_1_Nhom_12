@@ -1,15 +1,17 @@
 <?php
 
-    function insert_comment($tenloai){
-        $sql = "insert into comment (name) values ('$tenloai')";
+    function insert_comment($content, $date, $luot_tuong_tac, $id_user, $id_sp){
+        $sql = "insert into comment (content,date,luot_tuong_tac,id_user,id_sp) values ('$content','$date','$luot_tuong_tac','$id_user','$id_sp')";
         pdo_execute($sql);
     }
-    function delete_comment($id){
-        $sql="delete from comment where id_cmt=".$id;
+    function delete_comment($id_sp){
+        $sql="delete from comment where id_cmt=".$id_sp;
         pdo_execute($sql);
     }
-    function loadAll_comment(){
-        $sql="select * from comment order by id_cmt ASC"; 
+    function loadAll_comment($id_sp){
+        $sql="select * from comment where 1";
+        if($id_sp>0) $sql.=" AND id_sp='".$id_sp."'"; 
+        $sql=" order by id desc";
         $listcmt=pdo_query($sql);
         return $listcmt;
     }
