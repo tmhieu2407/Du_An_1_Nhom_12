@@ -22,7 +22,7 @@
             <a href="admin/index.php">Đăng nhập admin</a>
         </li>
         <li>
-            <a href="index.php?act=thoat">Thoát</a>
+            <a href="index.php?act=dangxuat">Đăng Xuất</a>
         </li>
     </div>
 

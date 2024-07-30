@@ -30,14 +30,15 @@ if (is_array($us)){
         <input type="number" name="phone"  class="form-control" placeholder="Số điện thoại" value="<?= $phone ?>">
       </div>
       <div class="form-group">
-        <label for="exampleInputEmail1">Role</label>
-        <input type="text" name="role" class="form-control" placeholder="Phân quyền" value="<?= $role ?>">
-      </div>
-      <div class="form-group">
         <label for="exampleInputEmail1">Address</label>
         <input type="text" name="address" class="form-control" placeholder="Địa chỉ" value="<?= $address ?>">
       </div>
-    <div class="card-body">
+      
+      <div class="form-group">
+        <label for="exampleInputEmail1">Role</label>
+        <input type="text" name="role" class="form-control" placeholder="Phân quyền" value="<?= $id_role ?>">
+      </div>
+      <div class="card-body">
         <input type="submit"  class="btn btn-primary" name="capnhat" value="Cập Nhật">   
         <a href="index.php?act=listuser"><input type="button"  class="btn btn-success" name="danhsach" value="Danh Sách"></a>
     </div>

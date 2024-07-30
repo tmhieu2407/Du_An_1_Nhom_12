@@ -1,12 +1,16 @@
 <?php
 session_start();
-include "../admin/models/pdo.php";
-include "../admin/models/taikhoan.php";
+include "../models/pdo.php";
+include "../models/taikhoan.php";
+
 include "header.php";
 
 if (isset($_GET['act']) && ($_GET['act'] != "" )) {
     $act = $_GET['act'];
     switch($act){
+        case'danhmuc':
+            include "danhmuc.php";
+            break;
         case'dangky':
             if(isset($_POST['dangky']) && ($_POST['dangky'])){
                 $username = $_POST['username'];
@@ -38,7 +42,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "" )) {
                     $checkuser = checkuser($username,$password);
                     if (is_array($checkuser)) {
                         $_SESSION['username']=$checkuser;
-                        header("Location: client/index.php");
+                        header("Location:index.php");
                     }else{
                         $thongBao="Tài khoản không tồn tại. Vui lòng đăng kí tài khoản!";
                     }
@@ -59,14 +63,14 @@ if (isset($_GET['act']) && ($_GET['act'] != "" )) {
                     
                     update_taikhoan($id_user, $username, $password, $ho_ten, $email, $phone, $role, $address);
                     $_SESSION['username'] = checkuser($username,$password);
-                    header("Location:taikhoan/index.php?act=edit_taikhoan"); 
+                    header("Location:index.php?act=edit_taikhoan"); 
                 }
             include "taikhoan/edit_taikhoan.php";
             break;
 
-            case 'thoat':
+            case 'dangxuat':
                 session_unset();
-                header("Location: ./client/index.php");
+                header("Location:/index.php");
             break;
 
         default:

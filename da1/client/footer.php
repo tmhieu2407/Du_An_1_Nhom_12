@@ -34,7 +34,7 @@
                     <div class="col-sm-6 col-md-3">
                         <div class="widget widget-brand">
 							<div class="logo logo-footer">
-								<a href="index.html"><img src="images/logo%402x.png" alt="image" width="107" height="24"></a>
+								<a href="index.html"><img src="./pub/images/logo%402x.png" alt="image" width="107" height="24"></a>
 							</div>
                             <ul class="flat-contact">
                                 <li class="address">112 Kingdom, NA 12, New York</li>

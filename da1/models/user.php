@@ -1,8 +1,8 @@
 <?php
 
-    function insert_user($username, $password, $ho_ten, $email, $phone, $role, $address){
-        $sql = "insert into user (username, password, ho_ten, email, phone, role, address) 
-            values ('$username', '$password', '$ho_ten', '$email', '$phone', '$role', '$address')";
+    function insert_user($username, $password, $ho_ten, $email, $phone, $address, $id_role){
+        $sql = "insert into user (username, password, ho_ten, email, phone, id_role, address) 
+            values ('$username', '$password', '$ho_ten', '$email', '$phone', '$address', '$id_role')";
         pdo_execute($sql);
     }
     function delete_user($id_user){
@@ -20,7 +20,7 @@
         return $us;
     }
     function update_user($id_user, $username){
-        $sql="update user set name='".$username."' where id_cata=".$id_user;
+        $sql="update user set name='".$username."' where id_user=".$id_user;
         pdo_execute($sql);
         
     }

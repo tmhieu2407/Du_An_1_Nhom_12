@@ -12,8 +12,8 @@
         <th scope="col">Họ và tên</th>
         <th scope="col">Email</th>
         <th scope="col">Phone</th>
-        <th scope="col">Role</th>
         <th scope="col">Address</th>
+        <th scope="col">id_Role</th>
         <th scope="col">Action</th>
       </tr>
     </thead>
@@ -29,8 +29,8 @@
         <td>'.$ho_ten.'</td>
         <td>'.$email.'</td>
         <td>'.$phone.'</td>
-        <td>'.$role.'</td>
         <td>'.$address.'</td>
+        <td>'.$id_role.'</td>
         <td>
           <a href="'.$updateuser.'"><input type="button" class="btn btn-success" value="Sửa"></a>
           <a href="'.$deleteuser.'"><input type="button" class="btn btn-warning" value="Xoá"></a>

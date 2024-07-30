@@ -48,21 +48,22 @@
                             <span class="content">FREE SHIPPING & FREE RETURNS ON ALL ORDERS</span>
                         </div>
                         <div class="top-bar-nav">
-                            <div class="inner">
-                                <div class="language-wrap">
-                                    <ul class="language">
-                                        <li>
-                                            <a href="#">English</a>
-                                            <ul class="sub-language">
-                                                <li><a href="#">English</a></li>
-                                                <li><a href="#">France</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>                                
-                                <div class="money">USD <i class="fa fa-usd"></i></div>
-                                <div class="account"><a href="index.php?act=dangnhap">Log in <i class="fa fa-user"></i></a></div>
-                                <div class="account"><a href="index.php?act=dangky">Log out <i class="fa fa-user"></i></a></div>
+
+                            <div class="inner">                            
+                                <div class="account">
+                                    <a href="index.php?act=dangky">
+                                        Register 
+                                        <i class="fa fa-user"></i>
+                                    </a>
+                                </div>
+
+                                <div class="account">
+                                    <a href="index.php?act=dangnhap">
+                                        Log in 
+                                        <i class="fa fa-user"></i>
+                                    </a>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -108,7 +109,7 @@
                         <nav id="mainnav" class="mainnav">
                             <ul class="menu">
                                 <li class="active">
-                                    <a href="index.html">HOME</a>
+                                    <a href="index.php">HOME</a>
                                     <ul class="submenu">
                                         <li><a href="index.html">Homepage Style 1</a></li>
                                         <li class="active"><a href="index-v2.html">Homepage Style 2</a></li>
@@ -123,7 +124,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="shop-3col.html">SHOP</a>
+                                    <a href="index.php?act=danhmuc.php">SHOP</a>
                                     <ul class="submenu">
                                         <li>
                                             <a href="shop-3col.html">Shop Layouts</a>

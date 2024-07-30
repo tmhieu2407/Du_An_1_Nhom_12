@@ -1,8 +1,9 @@
 <?php
-include "../admin/models/pdo.php";
-include "../admin/models/category.php";
-include "../admin/models/products.php";
-include "../admin/models/user.php";
+include "../models/pdo.php";
+include "../models/category.php";
+include "../models/products.php";
+include "../models/user.php";
+include "../models/role.php";
 include "navbar.php";
 include "header.php";
 
@@ -55,7 +56,7 @@ if (isset($_GET['act'])) {
                 $price = $_POST['price'];
 
                 $image = $_FILES['image']['name'];
-                $target_dir = "../admin/upload/";
+                $target_dir = "../upload/";
                 $target_file = $target_dir . basename($_FILES["image"]["name"]);
                 if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
                     // echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
@@ -112,7 +113,7 @@ if (isset($_GET['act'])) {
 
                 $image = $_FILES['image']['name'];
                 if ($image) {
-                    $target_dir = "../admin/upload/";
+                    $target_dir = "../upload/";
                     $target_file = $target_dir . basename($image);
                     move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
                 } else {
@@ -131,6 +132,11 @@ if (isset($_GET['act'])) {
             include "products/list.php";
             break;
 
+            case 'listcv':
+                $listrole = loadAll_role();
+                include "role/list.php";
+                break;
+
             case'adduser':
                 if (isset($_POST['themmoi']) && $_POST['themmoi']) {
                     $username = $_POST['username'];
@@ -138,9 +144,9 @@ if (isset($_GET['act'])) {
                     $ho_ten = $_POST['ho_ten'];
                     $email = $_POST['email'];
                     $phone = $_POST['phone'];
-                    $role = $_POST['role'];
                     $address = $_POST['address'];
-                    insert_user($username, $password, $ho_ten, $email, $phone, $role, $address);
+                    $id_role = $_POST['id_role'];
+                    insert_user($username, $password, $ho_ten, $email, $phone, $address, $id_role);
                     $thongbao = "Thêm thành công";
                 }
                 $listuser = loadAll_user();
