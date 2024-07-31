@@ -206,7 +206,18 @@ if (isset($_GET['act'])) {
                 $listorder = loadAll_order();
                 include "order/list.php";
                 break;
-
+            case 'addcmt':
+                if (isset($_POST['themmoi']) && $_POST['themmoi']) {
+                    $tenloai = $_POST['content'];
+                    insert_comment($tenloai);
+                    $thongbao = "Thêm thành công";
+                }
+                include "comment/add.php";
+                break;
+            case 'listcmt':
+                $listcmt = loadAll_comment();
+                include "comment/list.php";
+                break;
         default:
             include "home.php";
             break;
