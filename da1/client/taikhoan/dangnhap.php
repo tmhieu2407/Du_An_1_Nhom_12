@@ -9,12 +9,21 @@
     
     <div class="form-group primary-form-group">
         <label for="loginemail">Xin chào:</label>
-        <?= $user;?>
+        <?= $username;?>
     </div>
     <div class="form-group primary-form-group">
-        <label for="password">Mật khẩu</label>
-        <input type="password" value="" name="password" id="password"
-            class="form-control input-feild">
+        <li>
+            <a href="index.php?act=quenmk">Quên mật khẩu</a>
+        </li>
+        <li>
+            <a href="index.php?act=edit_taikhoan">Cập nhật tài khoản</a>
+        </li>
+        <li>
+            <a href="admin/index.php">Đăng nhập admin</a>
+        </li>
+        <li>
+            <a href="index.php?act=dangxuat">Đăng Xuất</a>
+        </li>
     </div>
 
     <?php
@@ -42,6 +51,12 @@
                 <span>
                     <i class="fa fa-lock submit-icon"></i>
                     Đăng nhập
+                </span>
+            </button>
+            <button type="reset" name="btn-reset" class="btn main-btn" >
+                <span>
+                    <i class="fa fa-lock submit-icon"></i>
+                    Nhập lại
                 </span>
             </button>
         </div>

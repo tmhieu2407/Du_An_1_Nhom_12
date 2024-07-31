@@ -1,9 +1,9 @@
 <?php
-include "../admin/models/pdo.php";
-include "../admin/models/category.php";
-include "../admin/models/products.php";
-include "../admin/models/user.php";
-include "../admin/models/comment.php";
+include "../models/pdo.php";
+include "../models/category.php";
+include "../models/products.php";
+include "../models/user.php";
+include "../models/role.php";
 include "navbar.php";
 include "header.php";
 
@@ -38,6 +38,7 @@ if (isset($_GET['act'])) {
             }
             include "category/update.php";
             break;
+
         case 'updatedm':
             if (isset($_POST['capnhat']) && $_POST['capnhat']) {
                 $tenloai = $_POST['tenloai'];
@@ -56,12 +57,12 @@ if (isset($_GET['act'])) {
                 $price = $_POST['price'];
 
                 $image = $_FILES['image']['name'];
-                $target_dir = "../admin/upload/";
+                $target_dir = "../upload/";
                 $target_file = $target_dir . basename($_FILES["image"]["name"]);
                 if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-                    // echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+                    // File uploaded successfully
                 } else {
-                    // echo "Sorry, there was an error uploading your file.";
+                    // Error uploading file
                 }
 
                 $date = $_POST['date'];
@@ -99,7 +100,7 @@ if (isset($_GET['act'])) {
         case 'updatesp':
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 $sp = loadOnce_products($_GET['id']);
-                $listdm = loadAll_category(); // Thêm dòng này để load danh sách danh mục
+                $listdm = loadAll_category(); // Load danh sách danh mục
             }
             include "products/update.php";
             break;
@@ -113,7 +114,7 @@ if (isset($_GET['act'])) {
 
                 $image = $_FILES['image']['name'];
                 if ($image) {
-                    $target_dir = "../admin/upload/";
+                    $target_dir = "../upload/";
                     $target_file = $target_dir . basename($image);
                     move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
                 } else {
@@ -132,49 +133,73 @@ if (isset($_GET['act'])) {
             include "products/list.php";
             break;
 
-            case'adduser':
-                if (isset($_POST['themmoi']) && $_POST['themmoi']) {
+        case 'listcv':
+            $listrole = loadAll_role();
+            include "role/list.php";
+            break;
+
+        case 'adduser':
+            if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['themmoi'])) {
+                $username = $_POST['username'];
+                $password = $_POST['password'];
+                $ho_ten = $_POST['ho_ten'];
+                $email = $_POST['email'];
+                $phone = $_POST['phone'];
+                $address = $_POST['address'];
+                $id_role = $_POST['id_role'];
+
+                // Kiểm tra tính hợp lệ của id_role
+                if (empty($id_role)) {
+                    $thongbao = "Vui lòng chọn vai trò hợp lệ.";
+                } else {
+                    try {
+                        insert_user($username, $password, $ho_ten, $email, $phone, $address, $id_role);
+                        $thongbao = "Thêm thành công";
+                    } catch (Exception $e) {
+                        $thongbao = "Lỗi: " . $e->getMessage();
+                    }
+                }
+            }
+            $listuser = loadAll_user();
+            include "user/add.php";
+            break;
+
+        case 'listuser':
+            $listuser = loadAll_user();
+            include "user/list.php";
+            break;
+
+        case 'deleteuser':
+            if (isset($_GET['id']) && $_GET['id'] > 0) {
+                delete_user($_GET['id']);
+            }
+            $listuser = loadAll_user("", 0);
+            include "user/list.php";
+            break;
+
+            case 'updateuser':
+                if (isset($_GET['id']) && $_GET['id'] > 0) {
+                    $us = loadOnce_user($_GET['id']);
+                    include "user/update.php";
+                }
+                break;
+            
+            case 'updateUser':
+                if (isset($_POST['capnhat']) && $_POST['capnhat']) {
+                    $id_user = $_POST['id_user'];
                     $username = $_POST['username'];
                     $password = $_POST['password'];
                     $ho_ten = $_POST['ho_ten'];
                     $email = $_POST['email'];
                     $phone = $_POST['phone'];
-                    $role = $_POST['role'];
                     $address = $_POST['address'];
-                    insert_user($username, $password, $ho_ten, $email, $phone, $role, $address);
-                    $thongbao = "Thêm thành công";
-                }
-                $listuser = loadAll_user();
-                include "user/add.php";
-                break;
-            case 'listuser':
-                $listuser = loadAll_user();
-
-                include "user/list.php";
-                break;
-            case 'deleteuser':
-                if (isset($_GET['id']) && $_GET['id'] > 0) {
-                    delete_user($_GET['id']);
-                }
-                $listuser = loadAll_user("",0);
-                include "user/list.php";
-                break;
-            case 'updateuser':
-                if (isset($_GET['id']) && $_GET['id'] > 0) {
-                    $us = loadOnce_user($_GET['id']);
-                    // $listdm = loadAll_category(); // Thêm dòng này để load danh sách danh mục
-                }
-                include "user/update.php";
-            break;
-            case 'updateUser':
-                if (isset($_POST['capnhat']) && $_POST['capnhat']) {
-                    $username = $_POST['username'];
-                    $password = $_POST['password'];
-                    update_user($id_cata, $tenloai);
+                    $id_role = $_POST['id_role'];
+            
+                    update_user($id_user, $username, $password, $ho_ten, $email, $phone, $address, $id_role);
                     $thongbao = "Cập nhật thành công";
+                    $listuser = loadAll_user();
+                    include "user/list.php";
                 }
-                $listuser = loadAll_user();
-                include "user/list.php";
                 break;
             case 'addcmt':
                 if (isset($_POST['themmoi']) && $_POST['themmoi']) {
