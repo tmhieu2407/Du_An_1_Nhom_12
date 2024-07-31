@@ -8,27 +8,41 @@
         <label for="exampleInputEmail1">Total bill	</label>
         <input type="text" name="total bill" class="form-control" placeholder="Tong don hang">
       </div>
+
       <div class="form-group">
-        <label for="exampleInputEmail1">Ho ten</label>
+        <label for="exampleInputEmail1">TRẠNG THÁI</label>
+        <select name="trangthai" id="">
+          <option value="Hoạt Động">Hoạt Động</option>
+          <option value="Ngừng Hoạt Động">Ngừng Hoạt Động</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">Họ và tên</label>
         <input type="text" name="ho_ten" class="form-control" placeholder="Nhập Giá Sản Phẩm">
       </div>
+
       <div class="form-group">
         <label for="exampleInputEmail1">Email</label>
         <input type="email" name="email" id="" class="form-control" placeholder="Ảnh sản phẩm">
       </div>
+
       <div class="form-group">
         <label for="exampleInputEmail1">Phone</label>
         <input type="number" name="phone" class="form-control" placeholder="Ngày Nhập Sản Phẩm">
       </div>
+
       <div class="form-group">
         <label for="exampleInputEmail1">address</label>
         <input type="text" name="address" class="form-control" placeholder="Lượt Xem Sản Phẩm">
       </div>
+
       <div class="form-group">
         <label for="exampleInputEmail1">Date</label>
         <input type="date" name="date"  class="form-control datetimepicker-input" id="exampleInputEmail1" placeholder="">
       </div>
-      <!-- <div class="form-group">
+
+      <div class="form-group">
         <label for="exampleInputEmail1">Category</label>
         <select name="id_cata">
           <?php
@@ -38,7 +52,7 @@
             }
           ?>
         </select>
-      </div> -->
+      </div>
     </div>
     
     <div class="card-body">

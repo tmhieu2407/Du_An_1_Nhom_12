@@ -4,6 +4,7 @@ include "../models/category.php";
 include "../models/products.php";
 include "../models/user.php";
 include "../models/role.php";
+include "../models/order.php";
 include "navbar.php";
 include "header.php";
 
@@ -200,6 +201,10 @@ if (isset($_GET['act'])) {
                     $listuser = loadAll_user();
                     include "user/list.php";
                 }
+                break;
+            case 'listorder':
+                $listorder = loadAll_order();
+                include "order/list.php";
                 break;
             case 'addcmt':
                 if (isset($_POST['themmoi']) && $_POST['themmoi']) {
