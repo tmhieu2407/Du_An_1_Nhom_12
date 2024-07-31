@@ -15,17 +15,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- Bootstrap  -->
-    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css" >
+    <link rel="stylesheet" type="text/css" href="./pub/stylesheets/bootstrap.css" >
 
     <!-- Theme Style -->
-    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/responsive.css">
+    <link rel="stylesheet" type="text/css" href="./pub/stylesheets/style.css">
+    <link rel="stylesheet" type="text/css" href="./pub/stylesheets/responsive.css">
 
     <!-- Colors -->
-    <link rel="stylesheet" type="text/css" href="stylesheets/colors/color1.css" id="colors">
+    <link rel="stylesheet" type="text/css" href="./pub/stylesheets/colors/color1.css" id="colors">
 
     <!-- Animation Style -->
-    <link rel="stylesheet" type="text/css" href="stylesheets/animate.css">
+    <link rel="stylesheet" type="text/css" href="./pub/stylesheets/animate.css">
 
 
     <!-- Favicon and touch icons  -->
@@ -37,12 +37,7 @@
     <![endif]-->
 </head> 
 <body class="header_sticky header-style-1 topbar-style-1 has-menu-extra">
-	<!-- Preloader -->
-    <div id="loading-overlay">
-        <div class="loader"></div>
-    </div>
-
-    <!-- Boxed -->
+	 <!-- Boxed -->
     <div class="boxed">
         <div id="site-header-wrap">
             <!-- Top Bar -->
@@ -53,20 +48,22 @@
                             <span class="content">FREE SHIPPING & FREE RETURNS ON ALL ORDERS</span>
                         </div>
                         <div class="top-bar-nav">
-                            <div class="inner">
-                                <div class="language-wrap">
-                                    <ul class="language">
-                                        <li>
-                                            <a href="#">English</a>
-                                            <ul class="sub-language">
-                                                <li><a href="#">English</a></li>
-                                                <li><a href="#">France</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>                                
-                                <div class="money">USD <i class="fa fa-usd"></i></div>
-                                <div class="account"><a href="#">My Account <i class="fa fa-user"></i></a></div>
+
+                            <div class="inner">                            
+                                <div class="account">
+                                    <a href="index.php?act=dangky">
+                                        Register 
+                                        <i class="fa fa-user"></i>
+                                    </a>
+                                </div>
+
+                                <div class="account">
+                                    <a href="index.php?act=dangnhap">
+                                        Log in 
+                                        <i class="fa fa-user"></i>
+                                    </a>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -78,7 +75,7 @@
                 <div class="container clearfix" id="site-header-inner">
                     <div id="logo" class="logo float-left">
                         <a href="index.html" title="logo">
-                            <img src="images/logo.png" alt="image" width="107" height="24" data-retina="images/logo@2x.png" data-width="107" data-height="24">
+                            <img src="./pub/images/logo.png" alt="image" width="107" height="24" data-retina="./pub/images/logo@2x.png" data-width="107" data-height="24">
                         </a>
                     </div><!-- /.logo -->
                     <div class="mobile-button"><span></span></div>
@@ -91,7 +88,7 @@
                             </form>
                         </li>
                         <li class="box-login">
-                            <a class="icon_login" href="#"></a>
+                            <a class="icon_login" href="index.php?act=dangnhap"></a>
                         </li>
                         <li class="box-cart nav-top-cart-wrapper">
                             <a class="icon_cart nav-cart-trigger active" href="#"><span>3</span></a>
@@ -112,7 +109,7 @@
                         <nav id="mainnav" class="mainnav">
                             <ul class="menu">
                                 <li class="active">
-                                    <a href="index.html">HOME</a>
+                                    <a href="index.php">HOME</a>
                                     <ul class="submenu">
                                         <li><a href="index.html">Homepage Style 1</a></li>
                                         <li class="active"><a href="index-v2.html">Homepage Style 2</a></li>
@@ -127,7 +124,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="shop-3col.html">SHOP</a>
+                                    <a href="index.php?act=danhmuc.php">SHOP</a>
                                     <ul class="submenu">
                                         <li>
                                             <a href="shop-3col.html">Shop Layouts</a>
@@ -183,3 +180,4 @@
                     </div><!-- /.nav-wrap -->
                 </div><!-- /.container-fluid -->
             </header><!-- /header -->
+        </div><!-- /#site-header-wrap -->
