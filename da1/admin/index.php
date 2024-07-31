@@ -4,6 +4,7 @@ include "../models/category.php";
 include "../models/products.php";
 include "../models/user.php";
 include "../models/role.php";
+include "../models/order.php";
 include "navbar.php";
 include "header.php";
 
@@ -201,7 +202,10 @@ if (isset($_GET['act'])) {
                     include "user/list.php";
                 }
                 break;
-            
+            case 'listorder':
+                $listorder = loadAll_order();
+                include "order/list.php";
+                break;
 
         default:
             include "home.php";
