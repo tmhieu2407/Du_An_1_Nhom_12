@@ -215,7 +215,7 @@ if (isset($_GET['act'])) {
                 include "comment/add.php";
                 break;
             case 'listcmt':
-                $listcmt = loadAll_comment();
+                $listcmt = loadAll_comment(0);
                 include "comment/list.php";
                 break;
         default:
