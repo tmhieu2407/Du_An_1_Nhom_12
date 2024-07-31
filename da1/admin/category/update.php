@@ -6,7 +6,7 @@
 
 <form action="index.php?act=updatedm" method="post" style="margin-left:260px;">
     <div class="card-body">
-        <h1>Cập nhật danh mụcccccccc</h1>
+        <h1>Cập nhật danh mục</h1>
         <input type="text" name="tenloai" class="form-control" placeholder="TÊN DANH MỤC" value="<?php if(isset($name) && ($name!="")) echo $name ?>">
     </div>
     <div class="card-body">
