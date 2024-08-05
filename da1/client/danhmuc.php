@@ -87,7 +87,7 @@
                                 <li class="product-item">
                                     <div class="product-thumb clearfix">
                                         <a href="#">
-                                            <img src=".//pub/images/shop/sh-3/1.jpg" alt="image">
+                                            <img src="./client/pub/images/shop/sh-3/1.jpg" alt="image">
                                         </a>
                                     </div>
                                     <div class="product-info clearfix">
@@ -117,7 +117,7 @@
                                 <li class="product-item">
                                     <div class="product-thumb clearfix">
                                         <a href="#">
-                                            <img src=".//pub/images/shop/sh-3/2.jpg" alt="image">
+                                            <img src="./client/pub/images/shop/sh-3/2.jpg" alt="image">
                                         </a>
                                         <span class="new">New</span>
                                     </div>
@@ -137,7 +137,7 @@
                                 <li class="product-item">
                                     <div class="product-thumb clearfix">
                                         <a href="#" class="product-thumb">
-                                            <img src=".//pub/images/shop/sh-3/3.jpg" alt="image">
+                                            <img src="./client/pub/images/shop/sh-3/3.jpg" alt="image">
                                         </a>
                                     </div>
                                     <div class="product-info clearfix">
@@ -156,7 +156,7 @@
                                 <li class="product-item">
                                     <div class="product-thumb clearfix">
                                         <a href="#" class="product-thumb">
-                                            <img src=".//pub/images/shop/sh-3/4.jpg" alt="image">
+                                            <img src="./client/pub/images/shop/sh-3/4.jpg" alt="image">
                                         </a>
                                         <span class="new">New</span>
                                     </div>
@@ -176,7 +176,7 @@
                                 <li class="product-item">
                                     <div class="product-thumb clearfix">
                                         <a href="#" class="product-thumb">
-                                            <img src=".//pub/images/shop/sh-3/5.jpg" alt="image">
+                                            <img src="./client/pub/images/shop/sh-3/5.jpg" alt="image">
                                         </a>
                                         <span class="new sale">Sale</span>
                                     </div>
@@ -210,7 +210,7 @@
                                 <li class="product-item">
                                     <div class="product-thumb clearfix">
                                         <a href="#" class="product-thumb">
-                                            <img src=".//pub/shop/sh-3/6.jpg" alt="image">
+                                            <img src="./client/pub/shop/sh-3/6.jpg" alt="image">
                                         </a>
                                     </div>
                                     <div class="product-info clearfix">
@@ -229,7 +229,7 @@
                                 <li class="product-item">
                                     <div class="product-thumb clearfix">
                                         <a href="#" class="product-thumb">
-                                            <img src=".//pub/images/shop/sh-3/7.jpg" alt="image">
+                                            <img src="./client/pub/images/shop/sh-3/7.jpg" alt="image">
                                         </a>
                                         <span class="new">New</span>
                                     </div>
@@ -249,7 +249,7 @@
                                 <li class="product-item">
                                     <div class="product-thumb clearfix">
                                         <a href="#" class="product-thumb">
-                                            <img src=".//pub/images/shop/sh-3/8.jpg" alt="image">
+                                            <img src="./client/pub/images/shop/sh-3/8.jpg" alt="image">
                                         </a>
                                         <span class="new sale">Sale</span>
                                     </div>
@@ -283,7 +283,7 @@
                                 <li class="product-item">
                                     <div class="product-thumb clearfix">
                                         <a href="#" class="product-thumb">
-                                            <img src=".//pub/images/shop/sh-3/9.jpg" alt="image">
+                                            <img src="./client/pub/images/shop/sh-3/9.jpg" alt="image">
                                         </a>
                                     </div>
                                     <div class="product-info clearfix">
