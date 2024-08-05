@@ -11,7 +11,7 @@ function delete_user($id_user) {
 }
 
 function loadAll_user() {
-    $sql = "SELECT * FROM user ORDER BY id_user ASC";
+    $sql = "SELECT * FROM user";
     $listuser = pdo_query($sql);
     return $listuser;
 }

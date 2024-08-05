@@ -1,11 +1,28 @@
         <!-- SLIDER -->
+         <style>
+            .product-item {
+                width: 24%; /* Điều chỉnh kích thước phù hợp với số lượng sản phẩm trên một hàng */
+                margin: 0.5%; /* Khoảng cách giữa các sản phẩm */
+                box-sizing: border-box; /* Đảm bảo padding và border không ảnh hưởng đến kích thước tổng thể */
+            }
+
+            .product-thumb img {
+                width: 100%; /* Ảnh sẽ chiếm toàn bộ chiều rộng của khung */
+                height: auto; /* Chiều cao tự động điều chỉnh theo chiều rộng */
+            }
+
+            .product-info {
+                text-align: center; /* Căn giữa thông tin sản phẩm */
+                padding: 10px; /* Khoảng cách xung quanh thông tin sản phẩm */
+            }
+         </style>
         <div class="rev_slider_wrapper fullwidthbanner-container">
             <div id="rev-slider2" class="rev_slider fullwidthabanner">
                 <ul>                    
                     <!-- Slide 1 -->
                     <li data-transition="random">
                        <!-- Main Image -->
-                       <img src="./pub/images/slider/slider-bg-3.jpg" alt="" data-bgposition="center center" data-no-retina>
+                       <img src="./client/pub/images/slider/slider-bg-3.jpg" alt="" data-bgposition="center center" data-no-retina>
                       
                        <!-- Layers -->
                        <div class="tp-caption tp-resizeme text-6e6 font-weight-500 letter-spacing-08"
@@ -91,7 +108,7 @@
                     <!-- Slide 2 -->
                     <li data-transition="random">
                         <!-- Main Image -->
-                        <img src="./pub/images/slider/slider-bg-5.jpg" alt="" data-bgposition="center center" data-no-retina>
+                        <img src="./client/pub/images/slider/slider-bg-5.jpg" alt="" data-bgposition="center center" data-no-retina>
                        
                         <!-- Layers -->
                         <div class="tp-caption tp-resizeme text-white font-weight-300"
@@ -189,7 +206,7 @@
                                     <div class="item data-effect-item">
                                         <div class="inner">
                                             <div class="thumb">
-                                                <img src="./pub/images/image-box/imgbox-1-370x270.jpg" alt="Image">
+                                                <img src="./client/pub/images/image-box/imgbox-1-370x270.jpg" alt="Image">
                                                 <div class="elm-btn">
                                                     <a href="#" class="themesflat-button bg-white width-150">For Men’s</a>
                                                 </div>
@@ -200,7 +217,7 @@
                                     <div class="item data-effect-item">
                                         <div class="inner">
                                             <div class="thumb">
-                                                <img src="./pub/images/image-box/imgbox-2-370x270.jpg" alt="Image">
+                                                <img src="./client/pub/images/image-box/imgbox-2-370x270.jpg" alt="Image">
                                                 <div class="elm-btn">
                                                     <a href="#" class="themesflat-button bg-white width-150">For Kid’s</a>
                                                 </div>
@@ -211,7 +228,7 @@
                                     <div class="item data-effect-item">
                                         <div class="inner">
                                             <div class="thumb">
-                                                <img src="./pub/images/image-box/imgbox-3-370x270.jpg" alt="Image">
+                                                <img src="./client/pub/images/image-box/imgbox-3-370x270.jpg" alt="Image">
                                                 <div class="elm-btn">
                                                     <a href="#" class="themesflat-button bg-white width-150">For woMen’s</a>
                                                 </div>
@@ -222,7 +239,7 @@
                                     <div class="item data-effect-item">
                                         <div class="inner">
                                             <div class="thumb">
-                                                <img src="./pub/images/image-box/imgbox-1-370x270.jpg" alt="Image">
+                                                <img src="./client/pub/images/image-box/imgbox-1-370x270.jpg" alt="Image">
                                                 <div class="elm-btn">
                                                     <a href="#" class="themesflat-button bg-white width-150">For Men’s</a>
                                                 </div>
@@ -233,7 +250,7 @@
                                     <div class="item data-effect-item">
                                         <div class="inner">
                                             <div class="thumb">
-                                                <img src="./pub/images/image-box/imgbox-2-370x270.jpg" alt="Image">
+                                                <img src="./client/pub/images/image-box/imgbox-2-370x270.jpg" alt="Image">
                                                 <div class="elm-btn">
                                                     <a href="#" class="themesflat-button bg-white width-150">For Kid’s</a>
                                                 </div>
@@ -244,7 +261,7 @@
                                     <div class="item data-effect-item">
                                         <div class="inner">
                                             <div class="thumb">
-                                                <img src="./pub/images/image-box/imgbox-3-370x270.jpg" alt="Image">
+                                                <img src="./client/pub/images/image-box/imgbox-3-370x270.jpg" alt="Image">
                                                 <div class="elm-btn">
                                                     <a href="#" class="themesflat-button bg-white width-150">For woMen’s</a>
                                                 </div>
@@ -270,7 +287,7 @@
                             <h2 class="title">Shop Collection</h2>
                         </div>
                         <ul class="flat-filter style-1 text-center max-width-682 clearfix">
-                            <li class="active"><a href="#" data-filter="*">All Product</a></li>
+                            <li class="active"><a href="#" data-filter="*">Tất cả sản phẩm</a></li>
                             <li><a href="#" data-filter=".kid">Clothing</a></li>
                             <li><a href="#" data-filter=".man">Shoes</a></li>
                             <li><a href="#" data-filter=".woman">Bags</a></li>
@@ -279,10 +296,46 @@
                         <div class="divider h40"></div>
                         <div class="product-content product-fourcolumn clearfix">
                             <ul class="product style2 isotope-product clearfix">
-                                <li class="product-item kid woman">
+                                <?php 
+                                    foreach ($spnew as $products) {
+                                        extract($products);
+                                        $hinh=$image_path.$image;
+                                        echo '<li class="product-item kid woman">
+                                                        <div class="product-thumb clearfix">
+                                                            <a href="#">
+                                                                <img src="'.$hinh.'" alt="image">
+                                                            </a>
+                                                        </div>
+                                                        <div class="product-info clearfix">
+                                                            <span class="product-title">'.$name.'</span>
+                                                            <div class="price">
+                                                                <ins>
+                                                                    <span class="amount" >'.$price.'</span>
+                                                                </ins>
+                                                            </div>
+                                                            <ul class="flat-color-list width-14">
+                                                                <li>
+                                                                    <a href="#" class="red"></a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" class="blue"></a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" class="black"></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="add-to-cart text-center">
+                                                            <a href="#">ADD TO CART</a>
+                                                        </div>
+                                                        <a href="#" class="like"><i class="fa fa-heart-o"></i></a>
+                                                    </li>';
+                                    }
+                                ?>
+                                <!-- <li class="product-item kid woman">
                                     <div class="product-thumb clearfix">
                                         <a href="#">
-                                            <img src="./pub/images/shop/sh-4/1.jpg" alt="image">
+                                            <img src="./client/pub/images/shop/sh-4/1.jpg" alt="image">
                                         </a>
                                     </div>
                                     <div class="product-info clearfix">
@@ -312,7 +365,7 @@
                                 <li class="product-item man accessories">
                                     <div class="product-thumb clearfix">
                                         <a href="#">
-                                            <img src="./pub/images/shop/sh-4/2.jpg" alt="image">
+                                            <img src="./client/pub/images/shop/sh-4/2.jpg" alt="image">
                                         </a>
                                         <span class="new">New</span>
                                     </div>
@@ -332,7 +385,7 @@
                                 <li class="product-item kid woman">
                                     <div class="product-thumb clearfix">
                                         <a href="#" class="product-thumb">
-                                            <img src="./pub/images/shop/sh-4/3.jpg" alt="image">
+                                            <img src="./client/pub/images/shop/sh-4/3.jpg" alt="image">
                                         </a>
                                     </div>
                                     <div class="product-info clearfix">
@@ -351,7 +404,7 @@
                                 <li class="product-item man accessories">
                                     <div class="product-thumb clearfix">
                                         <a href="#" class="product-thumb">
-                                            <img src="./pub/images/shop/sh-4/4.jpg" alt="image">
+                                            <img src="./client/pub/images/shop/sh-4/4.jpg" alt="image">
                                         </a>
                                         <span class="new sale">Sale</span>
                                     </div>
@@ -385,7 +438,7 @@
                                 <li class="product-item kid woman">
                                     <div class="product-thumb clearfix">
                                         <a href="#" class="product-thumb">
-                                            <img src="./pub/images/shop/sh-4/5.jpg" alt="image">
+                                            <img src="./client/pub/images/shop/sh-4/5.jpg" alt="image">
                                         </a>
                                         <span class="new">New</span>
                                     </div>
@@ -405,7 +458,7 @@
                                 <li class="product-item man accessories">
                                     <div class="product-thumb clearfix">
                                         <a href="#" class="product-thumb">
-                                            <img src="./pub/images/shop/sh-4/6.jpg" alt="image">
+                                            <img src="./client/pub/images/shop/sh-4/6.jpg" alt="image">
                                         </a>
                                         <span class="new sale">Sale</span>
                                     </div>
@@ -439,7 +492,7 @@
                                 <li class="product-item kid woman">
                                     <div class="product-thumb clearfix">
                                         <a href="#" class="product-thumb">
-                                            <img src="./pub/images/shop/sh-4/7.jpg" alt="image">
+                                            <img src="./client/pub/images/shop/sh-4/7.jpg" alt="image">
                                         </a>
                                     </div>
                                     <div class="product-info clearfix">
@@ -458,7 +511,7 @@
                                 <li class="product-item man accessories">
                                     <div class="product-thumb clearfix">
                                         <a href="#" class="product-thumb">
-                                            <img src="./pub/images/shop/sh-4/8.jpg" alt="image">
+                                            <img src="./client/pub/images/shop/sh-4/8.jpg" alt="image">
                                         </a>
                                         <span class="new">New</span>
                                     </div>
@@ -474,7 +527,7 @@
                                         <a href="#">ADD TO CART</a>
                                     </div>
                                     <a href="#" class="like"><i class="fa fa-heart-o"></i></a>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </div>
@@ -526,7 +579,7 @@
                                 <li class="product-item">
                                     <div class="product-thumb clearfix">
                                         <a href="#">
-                                            <img src="./pub/images/shop/sh-5/1.jpg" alt="image">
+                                            <img src="./client/pub/images/shop/sh-5/1.jpg" alt="image">
                                         </a>
                                         <span class="new sale">Sale</span>
                                     </div>
@@ -549,7 +602,7 @@
                                 <li class="product-item">
                                     <div class="product-thumb clearfix">
                                         <a href="#">
-                                            <img src="./pub/images/shop/sh-5/2.jpg" alt="image">
+                                            <img src="./client/pub/images/shop/sh-5/2.jpg" alt="image">
                                         </a>
                                         <span class="new">New</span>
                                     </div>
@@ -580,7 +633,7 @@
                                 <li class="product-item">
                                     <div class="product-thumb clearfix">
                                         <a href="#">
-                                            <img src="./pub/images/shop/sh-5/3.jpg" alt="image">
+                                            <img src="./client/pub/images/shop/sh-5/3.jpg" alt="image">
                                         </a>
                                         <span class="new">New</span>
                                     </div>
@@ -600,7 +653,7 @@
                                 <li class="product-item">
                                     <div class="product-thumb clearfix">
                                         <a href="#">
-                                            <img src="./pub/images/shop/sh-5/4.jpg" alt="image">
+                                            <img src="./client/pub/images/shop/sh-5/4.jpg" alt="image">
                                         </a>
                                         <span class="new sale">Sale</span>
                                     </div>
@@ -623,7 +676,7 @@
                                 <li class="product-item">
                                     <div class="product-thumb clearfix">
                                         <a href="#">
-                                            <img src="./pub/images/shop/sh-5/5.jpg" alt="image">
+                                            <img src="./client/pub/images/shop/sh-5/5.jpg" alt="image">
                                         </a>
                                         <span class="new sale">Sale</span>
                                     </div>
@@ -736,7 +789,7 @@
                                 <div class="owl-carousel owl-theme">
                                     <article class="post clearfix">
                                         <div class="featured-post data-effect-item">
-                                            <img src="./pub/images/blog/new-lastest-4-370x280.jpg" alt="image">
+                                            <img src="./client/pub/images/blog/new-lastest-4-370x280.jpg" alt="image">
                                             <div class="overlay-effect bg-overlay-black opacity02"></div>
                                         </div> 
                                         <div class="content-post">                                        
@@ -760,7 +813,7 @@
                                     </article><!-- /.post -->
                                     <article class="post clearfix ">
                                         <div class="featured-post data-effect-item">
-                                            <img src="./pub/images/blog/new-lastest-5-370x280.jpg" alt="image">
+                                            <img src="./client/pub/images/blog/new-lastest-5-370x280.jpg" alt="image">
                                             <div class="overlay-effect bg-overlay-black opacity02"></div>
                                         </div> 
                                         <div class="content-post">                                        
@@ -784,7 +837,7 @@
                                     </article><!-- /.post -->
                                     <article class="post clearfix">
                                         <div class="featured-post data-effect-item">
-                                            <img src="./pub/images/blog/new-lastest-6-370x280.jpg" alt="image">
+                                            <img src="./client/pub/images/blog/new-lastest-6-370x280.jpg" alt="image">
                                             <div class="overlay-effect bg-overlay-black opacity02"></div>
                                         </div> 
                                         <div class="content-post">                                        
@@ -808,7 +861,7 @@
                                     </article><!-- /.post --> 
                                     <article class="post clearfix">
                                         <div class="featured-post data-effect-item">
-                                            <img src="./pub/images/blog/new-lastest-4-370x280.jpg" alt="image">
+                                            <img src="./client/pub/images/blog/new-lastest-4-370x280.jpg" alt="image">
                                             <div class="overlay-effect bg-overlay-black opacity02"></div>
                                         </div> 
                                         <div class="content-post">                                        
@@ -832,7 +885,7 @@
                                     </article><!-- /.post -->
                                     <article class="post clearfix">
                                         <div class="featured-post data-effect-item">
-                                            <img src="./pub/images/blog/new-lastest-5-370x280.jpg" alt="image">
+                                            <img src="./client/pub/images/blog/new-lastest-5-370x280.jpg" alt="image">
                                             <div class="overlay-effect bg-overlay-black opacity02"></div>
                                         </div> 
                                         <div class="content-post">                                        
@@ -856,7 +909,7 @@
                                     </article><!-- /.post -->
                                     <article class="post clearfix">
                                         <div class="featured-post data-effect-item">
-                                            <img src="./pub/images/blog/new-lastest-6-370x280.jpg" alt="image">
+                                            <img src="./client/pub/images/blog/new-lastest-6-370x280.jpg" alt="image">
                                             <div class="overlay-effect bg-overlay-black opacity02"></div>
                                         </div> 
                                         <div class="content-post">                                        

@@ -26,7 +26,7 @@
       </div>
       <div class="form-group">
         <label for="exampleInputEmail1">Description</label>
-        <input type="text" name="moTa"  class="form-control datetimepicker-input" id="exampleInputEmail1" placeholder="">
+        <input type="text" name="description"  class="form-control datetimepicker-input" id="exampleInputEmail1" placeholder="">
       </div>
       <div class="form-group">
         <label for="exampleInputEmail1">Category</label>

@@ -15,17 +15,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- Bootstrap  -->
-    <link rel="stylesheet" type="text/css" href="./pub/stylesheets/bootstrap.css" >
+    <link rel="stylesheet" type="text/css" href="./client/pub/stylesheets/bootstrap.css" >
 
     <!-- Theme Style -->
-    <link rel="stylesheet" type="text/css" href="./pub/stylesheets/style.css">
-    <link rel="stylesheet" type="text/css" href="./pub/stylesheets/responsive.css">
+    <link rel="stylesheet" type="text/css" href="./client/pub/stylesheets/style.css">
+    <link rel="stylesheet" type="text/css" href="./client/pub/stylesheets/responsive.css">
 
     <!-- Colors -->
-    <link rel="stylesheet" type="text/css" href="./pub/stylesheets/colors/color1.css" id="colors">
+    <link rel="stylesheet" type="text/css" href="./client/pub/stylesheets/colors/color1.css" id="colors">
 
     <!-- Animation Style -->
-    <link rel="stylesheet" type="text/css" href="./pub/stylesheets/animate.css">
+    <link rel="stylesheet" type="text/css" href="./client/pub/stylesheets/animate.css">
 
 
     <!-- Favicon and touch icons  -->
@@ -75,7 +75,7 @@
                 <div class="container clearfix" id="site-header-inner">
                     <div id="logo" class="logo float-left">
                         <a href="index.html" title="logo">
-                            <img src="./pub/images/logo.png" alt="image" width="107" height="24" data-retina="./pub/images/logo@2x.png" data-width="107" data-height="24">
+                            <img src="./client/pub/images/logo.png" alt="image" width="107" height="24" data-retina="./client/pub/images/logo@2x.png" data-width="107" data-height="24">
                         </a>
                     </div><!-- /.logo -->
                     <div class="mobile-button"><span></span></div>
@@ -124,7 +124,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="index.php?act=danhmuc.php">SHOP</a>
+                                    <a href="index.php?act=danhmuc">SHOP</a>
                                     <ul class="submenu">
                                         <li>
                                             <a href="shop-3col.html">Shop Layouts</a>
