@@ -1,5 +1,5 @@
         <!-- SLIDER -->
-         <style>
+         <!-- <style>
             .product-item {
                 width: 24%; /* Điều chỉnh kích thước phù hợp với số lượng sản phẩm trên một hàng */
                 margin: 0.5%; /* Khoảng cách giữa các sản phẩm */
@@ -15,7 +15,7 @@
                 text-align: center; /* Căn giữa thông tin sản phẩm */
                 padding: 10px; /* Khoảng cách xung quanh thông tin sản phẩm */
             }
-         </style>
+         </style> -->
         <div class="rev_slider_wrapper fullwidthbanner-container">
             <div id="rev-slider2" class="rev_slider fullwidthabanner">
                 <ul>                    
@@ -288,7 +288,7 @@
                         </div>
                         <ul class="flat-filter style-1 text-center max-width-682 clearfix">
                             <li class="active"><a href="#" data-filter="*">Tất cả sản phẩm</a></li>
-                            <li><a href="#" data-filter=".kid">Clothing</a></li>
+                            <li><a href="#" data-filter=".kid">Áo thun</a></li>
                             <li><a href="#" data-filter=".man">Shoes</a></li>
                             <li><a href="#" data-filter=".woman">Bags</a></li>
                             <li><a href="#" data-filter=".accessories">Accessories</a></li>

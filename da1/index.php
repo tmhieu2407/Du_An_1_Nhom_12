@@ -3,17 +3,23 @@ session_start();
 include "./models/pdo.php";
 include "./models/taikhoan.php";
 include "global.php";
-include "client/header.php";
 include "./models/products.php";
+include "./models/category.php";
+include "client/header.php";
+// include "client/detailProduct.php";
 
 $spnew = loadAll_products_home();
+$listdm = loadAll_category();
 
 if (isset($_GET['act']) && ($_GET['act'] != "" )) {
     $act = $_GET['act'];
     switch($act){
-        case'danhmuc':
-            include "client/danhmuc.php";
-            break;
+        case 'danhmuc':
+            include './client/danhmuc.php';
+        break;
+        case 'detail':
+            include './client/detailProduct.php';
+        break;
         case'dangky':
             if(isset($_POST['dangky']) && ($_POST['dangky'])){
                 $username = $_POST['username'];

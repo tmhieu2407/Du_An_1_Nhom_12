@@ -1,4 +1,5 @@
 <?php
+
 include "../models/pdo.php";
 include "../models/category.php";
 include "../models/products.php";
@@ -140,6 +141,8 @@ if (isset($_GET['act'])) {
             break;
 
         case 'adduser':
+            ini_set('display_errors', 1);
+            error_reporting(E_ALL);
             if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['themmoi'])) {
                 $username = $_POST['username'];
                 $password = $_POST['password'];
@@ -208,7 +211,8 @@ if (isset($_GET['act'])) {
             include "order/list.php";
             break;
         case 'adddh':
-            if (isset($_POST['themmoi']) && $_POST['themmoi']) {
+            print_r($_POST);
+            if (isset($_POST['themmoi']) && $_POST['themmoi'])  {
                 $totalbill = $_POST['totalbill'];
                 $trangthai = $_POST['trangthai'];
                 $ho_ten = $_POST['ho_ten'];
@@ -218,15 +222,25 @@ if (isset($_GET['act'])) {
                 $date = $_POST['date'];
                 $id_user = $_POST['id_user'];
 
-                insert_order($totalbill, $trangthai, $ho_ten, $email, $phone, $address, $date, $id_user);
-                $thongbao = "Thêm thành công";
-                  
+                try {
+                    insert_order($totalbill, $trangthai, $ho_ten, $email, $phone, $address, $date, $id_user);
+                    $sthongbao = "Thêm thành công";
+                } catch (Exception $e) {
+                    echo 'Caught exception: ',  $e->getMessage(), "\n";
+                }
             }
             $listuser = loadAll_user();
             $listorder = loadAll_order();
             include "order/add.php";
             break;
 
+        case 'deletedh':                
+            if (isset($_GET['id']) && $_GET['id'] > 0) {
+                delete_order($_GET['id']);
+            }
+            $listorder = loadAll_order();
+            include "order/list.php";
+            break;
 
         default:
             include "home.php";

@@ -1,12 +1,11 @@
 <?php
-function insert_order($totalbill, $trangthai, $ho_ten, $email, $phone, $address, $date, $id_user) {
-    $sql = "INSERT INTO order (totalbill, trangthai, ho_ten, email, phone, address, date, id_user)
-            VALUES ('$totalbill', '$trangthai', '$ho_ten', '$email', '$phone', '$address', '$date', '$id_user')";
+function insert_order($totalbill, $trangthai, $ho_ten, $email, $phone, $address, $date, $id_user){
+    $sql = "INSERT INTO `order` (totalbill, trangthai, ho_ten, email, phone, address, date, id_user) VALUES ('$totalbill', '$trangthai', '$ho_ten', '$email', '$phone', '$address', '$date', '$id_user')";
     pdo_execute($sql);
 }
 
-function delete_order($id_user) {
-    $sql = "DELETE FROM user WHERE id_user = $id_user";
+function delete_order($id_order){
+    $sql = "DELETE FROM `order` WHERE id_order = '$id_order'";
     pdo_execute($sql);
 }
 
@@ -16,7 +15,7 @@ function loadAll_order() {
     return $listorder;
 }
 function loadOnce_order($id) {
-    $sql = "SELECT * FROM user WHERE id_user = $id";
+    $sql = "SELECT * FROM user WHERE id_user=$id";
     $us = pdo_query_one($sql);
     return $us;
 }

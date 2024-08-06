@@ -110,7 +110,7 @@
                             <ul class="menu">
                                 <li class="active">
                                     <a href="index.php">HOME</a>
-                                    <ul class="submenu">
+                                    <!-- <ul class="submenu">
                                         <li><a href="index.html">Homepage Style 1</a></li>
                                         <li class="active"><a href="index-v2.html">Homepage Style 2</a></li>
                                         <li><a href="index-v3.html">Homepage Style 3</a></li>
@@ -121,21 +121,26 @@
                                         <li><a href="index-v8.html">Homepage Style 8</a></li>
                                         <li><a href="index-v9.html">Homepage Style 9</a></li>
                                         <li><a href="index-v10.html">Homepage Style 10</a></li>   
-                                    </ul>
+                                    </ul> -->
                                 </li>
                                 <li>
                                     <a href="index.php?act=danhmuc">SHOP</a>
                                     <ul class="submenu">
-                                        <li>
+                                        <?php
+                                        if (is_array($listdm)) {
+                                            foreach ($listdm as $catalog) {
+                                                extract($catalog);
+                                                $linkdm = "index.php?act=sanpham&id_dm=" . $id_cata;
+                                                echo "<li><a href='" . $linkdm . "'>" . $name . "</a></li>";
+                                            }
+                                        } else {
+                                            echo "Không có danh mục để hiển thị.";
+                                        }
+                                        ?>
+                                        <!-- <li>
                                             <a href="shop-3col.html">Shop Layouts</a>
-                                            <ul class="submenu">
-                                                <li><a href="shop-3col.html">Three Columns</a></li>
-                                                <li><a href="shop-4col.html">Four Columns</a></li>
-                                                <li><a href="shop-5col.html">Five Columns</a></li>
-                                                <li><a href="shop-3col-slide.html">Slidebar Three Columns</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
+                                        </li> -->
+                                        <!-- <li>
                                             <a href="shop-detail-des.html">Shop Details</a>
                                             <ul class="submenu">
                                                 <li><a href="shop-detail-des.html">Details Description</a></li>
@@ -145,8 +150,8 @@
                                                 <li><a href="shop-detail-zoom.html">Details Zoom</a></li>
                                                 <li><a href="shop-detail-group.html">Details Grouped</a></li>
                                                 <li><a href="shop-detail-video.html">Details Video</a></li>                                              
-                                            </ul>
-                                        </li>
+                                            </ul> -->
+                                        <!-- </li> -->
                                     </ul>
                                 </li>
                                 <li>

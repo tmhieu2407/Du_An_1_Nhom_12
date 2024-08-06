@@ -20,27 +20,25 @@
     </thead>
     <tbody>
     <?php
-    if (empty($listorder)) {
-        echo '<tr><td colspan="10">Không có đơn hàng nào.</td></tr>';
-    } else {
-        foreach ($listorder as $order) {
-            extract($order);
-            echo '<tr>
-                <th scope="row">'.$id_order.'</th>
-                <td>'.$totalbill.'</td>
-                <td>'.$trangthai.'</td>
-                <td>'.$ho_ten.'</td>
-                <td>'.$email.'</td>
-                <td>'.$phone.'</td>
-                <td>'.$address.'</td>
-                <td>'.$date.'</td>
-                <td>'.$id_user.'</td>
-                <td>
-                    <a href="index.php?act=updateorder&id='.$id_order.'"><input type="button" class="btn btn-success" value="Sửa"></a>
-                    <a href="index.php?act=deleteorder&id='.$id_order.'"><input type="button" class="btn btn-warning" value="Xóa"></a>
-                </td>
-            </tr>';
-        }
+    foreach ($listorder as $order) {
+      extract($order);
+      $updatedh="index.php?act=updatedh&id=".$id_order;
+      $deletedh="index.php?act=deletedh&id=".$id_order;
+      echo '<tr>
+        <th scope="row">'.$id_order.'</th>
+        <td>'.$totalbill.'</td>
+        <td>'.$trangthai.'</td>
+        <td>'.$ho_ten.'</td>
+        <td>'.$email.'</td>
+        <td>'.$phone.'</td>
+        <td>'.$address.'</td>
+        <td>'.$date.'</td>
+        <td>'.$id_user.'</td>
+        <td>
+          <a href="'.$updatedh.'"><input type="button" class="btn btn-success" value="Sửa"></a>
+          <a href="'.$deletedh.'"><input type="button" class="btn btn-warning" value="Xoá"></a>
+        </td>
+      </tr>';
     }
     ?>
     </tbody>
