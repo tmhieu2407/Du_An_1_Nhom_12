@@ -9,17 +9,20 @@
         pdo_execute($sql);
     }
     function loadAll_category(){
-        $sql="select * from catalog order by id_cata ASC"; 
+        $sql="select * from catalog order by id_cata desc"; 
         $listdm=pdo_query($sql);
         return $listdm;
     }
+    $listdm = loadAll_category();
+    // var_dump($listdm); // Kiểm tra xem có trả về dữ liệu không
+
     function loadOnce_category($id){
         $sql="select * from catalog where id_cata=".$id;
         $dm=pdo_query_one($sql);
         return $dm;
     }
-    function update_category($id, $tenloai){
-        $sql="update catalog set name='".$tenloai."' where id_cata".$id;
+    function update_category($id_cata, $tenloai){
+        $sql="update catalog set name='".$tenloai."' where id_cata=".$id_cata;
         pdo_execute($sql);
     }
 ?>
