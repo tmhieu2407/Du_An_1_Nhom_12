@@ -4,8 +4,8 @@ include "../models/pdo.php";
 include "../models/category.php";
 include "../models/products.php";
 include "../models/user.php";
-include "../models/role.php";
-include "../models/order.php";
+include "../models/comment.php";
+include "../admin/models/news.php";
 include "navbar.php";
 include "header.php";
 
@@ -135,11 +135,6 @@ if (isset($_GET['act'])) {
             include "products/list.php";
             break;
 
-        case 'listcv':
-            $listrole = loadAll_role();
-            include "role/list.php";
-            break;
-
         case 'adduser':
             ini_set('display_errors', 1);
             error_reporting(E_ALL);
@@ -198,13 +193,6 @@ if (isset($_GET['act'])) {
                 $phone = $_POST['phone'];
                 $address = $_POST['address'];
                 $id_role = $_POST['id_role'];
-        
-                update_user($id_user, $username, $password, $ho_ten, $email, $phone, $address, $id_role);
-                $thongbao = "Cập nhật thành công";
-                $listuser = loadAll_user();
-                include "user/list.php";
-            }
-            break;
 
         case 'listdh':
             $listorder = loadAll_order();

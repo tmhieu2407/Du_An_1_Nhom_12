@@ -84,7 +84,6 @@
               </li>
             </ul>
           </li>
-          
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
@@ -95,20 +94,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="index.php?act=listbl" class="nav-link">
+                <a href="index.php?act=listcmt" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Danh Sách Bình Luận</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="index.php?act=addbl" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Thêm Bình Luận</p>
-                </a>
-              </li>
             </ul>
           </li>
-
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
@@ -132,25 +124,29 @@
               </li>
             </ul>
           </li>
-
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
-                Chức Vụ
+                Tin Tức
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="index.php?act=listcv" class="nav-link">
+                <a href="index.php?act=listnew" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Danh Sách Chức Vụ</p>
+                  <p>Danh Sách Tin Tức</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="index.php?act=addnew" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Thêm Người Dùng</p>
                 </a>
               </li>
             </ul>
           </li>
-
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
@@ -170,29 +166,6 @@
                 <a href="index.php?act=adddh" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Thêm Đơn Hàng</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-chart-pie"></i>
-              <p>
-                Tin Tức
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="index.php?act=listtt" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Danh Sách Tin Tức</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="index.php?act=addtt" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Thêm Tin Tức</p>
                 </a>
               </li>
             </ul>
