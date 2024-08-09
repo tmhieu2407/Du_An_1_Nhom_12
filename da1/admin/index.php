@@ -3,8 +3,8 @@ include "../models/pdo.php";
 include "../models/category.php";
 include "../models/products.php";
 include "../models/user.php";
-include "../models/role.php";
-include "../models/order.php";
+include "../models/comment.php";
+include "../admin/models/news.php";
 include "navbar.php";
 include "header.php";
 
@@ -134,11 +134,6 @@ if (isset($_GET['act'])) {
             include "products/list.php";
             break;
 
-        case 'listcv':
-            $listrole = loadAll_role();
-            include "role/list.php";
-            break;
-
         case 'adduser':
             if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['themmoi'])) {
                 $username = $_POST['username'];
@@ -184,7 +179,7 @@ if (isset($_GET['act'])) {
                 include "user/update.php";
             }
             break;
-        
+
         case 'updateUser':
             if (isset($_POST['capnhat']) && $_POST['capnhat']) {
                 $id_user = $_POST['id_user'];
@@ -195,38 +190,48 @@ if (isset($_GET['act'])) {
                 $phone = $_POST['phone'];
                 $address = $_POST['address'];
                 $id_role = $_POST['id_role'];
-        
+
                 update_user($id_user, $username, $password, $ho_ten, $email, $phone, $address, $id_role);
                 $thongbao = "Cập nhật thành công";
                 $listuser = loadAll_user();
                 include "user/list.php";
             }
             break;
-
-        case 'listdh':
-            $listorder = loadAll_order();
-            include "order/list.php";
+        case 'listcmt':
+            $listcmt = loadAll_comment(0);
+            include "comment/list.php";
             break;
-        case 'adddh':
-            if (isset($_POST['themmoi']) && $_POST['themmoi']) {
-                $totalbill = $_POST['totalbill'];
-                $trangthai = $_POST['trangthai'];
-                $ho_ten = $_POST['ho_ten'];
-                $email = $_POST['email'];
-                $phone = $_POST['phone'];
-                $address = $_POST['address'];
-                $date = $_POST['date'];
-                $id_user = $_POST['id_user'];
-
-                insert_order($totalbill, $trangthai, $ho_ten, $email, $phone, $address, $date, $id_user);
-                $thongbao = "Thêm thành công";
-                  
+  
+        case 'deletecmt':
+            if (isset($_GET['id_cmt']) && $_GET['id_cmt'] > 0) {
+                delete_comment($_GET['id_cmt']);
             }
-            $listuser = loadAll_user();
-            $listorder = loadAll_order();
-            include "order/add.php";
+            $listdm = loadAll_comment(0);
+            include "comment/list.php";
             break;
 
+        case 'listnew':
+            $listnew = loadAll_new();
+            include "news/list.php";
+            break;
+
+        case 'addnew':
+            if (isset($_POST['themmoi']) && $_POST['themmoi']) {
+                $image_new = $_FILES['image_new']['name'];
+                $target_dir = "../upload/";
+                $target_file = $target_dir . basename($_FILES["image_new"]["name"]);
+                if (move_uploaded_file($_FILES["image_new"]["tmp_name"], $target_file)) {
+                    // File uploaded successfully
+                } else {
+                    // Error uploading file   
+                }
+                $content_new = $_POST['content_new'];
+                insert_news($image_new, $content_new);
+                $thongbao = "Thêm thành công";
+            }
+            $listdm = loadAll_new();
+            include "news/add.php";
+            break;
 
         default:
             include "home.php";
@@ -237,4 +242,3 @@ if (isset($_GET['act'])) {
 }
 
 include "footer.php";
-?>
