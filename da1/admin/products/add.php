@@ -26,11 +26,7 @@
       </div>
       <div class="form-group">
         <label for="exampleInputEmail1">Description</label>
-<<<<<<< Updated upstream
-        <input type="text" name="moTa"  class="form-control datetimepicker-input" id="exampleInputEmail1" placeholder="">
-=======
         <input type="text" name="description"  class="form-control datetimepicker-input" id="exampleInputEmail1" placeholder="">
->>>>>>> Stashed changes
       </div>
       <div class="form-group">
         <label for="exampleInputEmail1">Category</label>
