@@ -82,4 +82,6 @@ if (isset($_GET['act']) && ($_GET['act'] != "" )) {
 }
 // include 'home.php';
 include 'footer.php';
-?>
+include "header.php";
+
+                       

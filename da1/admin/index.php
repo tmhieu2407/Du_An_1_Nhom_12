@@ -242,3 +242,4 @@ if (isset($_GET['act'])) {
 }
 
 include "footer.php";
+
