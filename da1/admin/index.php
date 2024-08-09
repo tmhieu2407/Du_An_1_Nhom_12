@@ -1,8 +1,18 @@
 <?php
+<<<<<<< Updated upstream
 include "../admin/models/pdo.php";
 include "../admin/models/category.php";
 include "../admin/models/products.php";
 include "../admin/models/user.php";
+=======
+
+include "../models/pdo.php";
+include "../models/category.php";
+include "../models/products.php";
+include "../models/user.php";
+include "../models/role.php";
+include "../models/order.php";
+>>>>>>> Stashed changes
 include "navbar.php";
 include "header.php";
 
@@ -37,6 +47,10 @@ if (isset($_GET['act'])) {
             }
             include "category/update.php";
             break;
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
         case 'updatedm':
             if (isset($_POST['capnhat']) && $_POST['capnhat']) {
                 $tenloai = $_POST['tenloai'];
@@ -58,9 +72,15 @@ if (isset($_GET['act'])) {
                 $target_dir = "../admin/upload/";
                 $target_file = $target_dir . basename($_FILES["image"]["name"]);
                 if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
+<<<<<<< Updated upstream
                     // echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
                 } else {
                     // echo "Sorry, there was an error uploading your file.";
+=======
+                    // File uploaded successfully
+                } else {
+                    // Error uploading file
+>>>>>>> Stashed changes
                 }
 
                 $date = $_POST['date'];
@@ -98,7 +118,11 @@ if (isset($_GET['act'])) {
         case 'updatesp':
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 $sp = loadOnce_products($_GET['id']);
+<<<<<<< Updated upstream
                 $listdm = loadAll_category(); // Thêm dòng này để load danh sách danh mục
+=======
+                $listdm = loadAll_category(); // Load danh sách danh mục
+>>>>>>> Stashed changes
             }
             include "products/update.php";
             break;
@@ -131,6 +155,7 @@ if (isset($_GET['act'])) {
             include "products/list.php";
             break;
 
+<<<<<<< Updated upstream
             case'adduser':
                 if (isset($_POST['themmoi']) && $_POST['themmoi']) {
                     $username = $_POST['username'];
@@ -175,6 +200,115 @@ if (isset($_GET['act'])) {
                 $listuser = loadAll_user();
                 include "user/list.php";
                 break;
+=======
+        case 'listcv':
+            $listrole = loadAll_role();
+            include "role/list.php";
+            break;
+
+        case 'adduser':
+            ini_set('display_errors', 1);
+            error_reporting(E_ALL);
+            if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['themmoi'])) {
+                $username = $_POST['username'];
+                $password = $_POST['password'];
+                $ho_ten = $_POST['ho_ten'];
+                $email = $_POST['email'];
+                $phone = $_POST['phone'];
+                $address = $_POST['address'];
+                $id_role = $_POST['id_role'];
+
+                // Kiểm tra tính hợp lệ của id_role
+                if (empty($id_role)) {
+                    $thongbao = "Vui lòng chọn vai trò hợp lệ.";
+                } else {
+                    try {
+                        insert_user($username, $password, $ho_ten, $email, $phone, $address, $id_role);
+                        $thongbao = "Thêm thành công";
+                    } catch (Exception $e) {
+                        $thongbao = "Lỗi: " . $e->getMessage();
+                    }
+                }
+            }
+            $listuser = loadAll_user();
+            include "user/add.php";
+            break;
+
+        case 'listuser':
+            $listuser = loadAll_user();
+            include "user/list.php";
+            break;
+
+        case 'deleteuser':
+            if (isset($_GET['id']) && $_GET['id'] > 0) {
+                delete_user($_GET['id']);
+            }
+            $listuser = loadAll_user("", 0);
+            include "user/list.php";
+            break;
+
+        case 'updateuser':
+            if (isset($_GET['id']) && $_GET['id'] > 0) {
+                $us = loadOnce_user($_GET['id']);
+                include "user/update.php";
+            }
+            break;
+        
+        case 'updateUser':
+            if (isset($_POST['capnhat']) && $_POST['capnhat']) {
+                $id_user = $_POST['id_user'];
+                $username = $_POST['username'];
+                $password = $_POST['password'];
+                $ho_ten = $_POST['ho_ten'];
+                $email = $_POST['email'];
+                $phone = $_POST['phone'];
+                $address = $_POST['address'];
+                $id_role = $_POST['id_role'];
+        
+                update_user($id_user, $username, $password, $ho_ten, $email, $phone, $address, $id_role);
+                $thongbao = "Cập nhật thành công";
+                $listuser = loadAll_user();
+                include "user/list.php";
+            }
+            break;
+
+        case 'listdh':
+            $listorder = loadAll_order();
+            include "order/list.php";
+            break;
+        case 'adddh':
+            print_r($_POST);
+            if (isset($_POST['themmoi']) && $_POST['themmoi'])  {
+                $totalbill = $_POST['totalbill'];
+                $trangthai = $_POST['trangthai'];
+                $ho_ten = $_POST['ho_ten'];
+                $email = $_POST['email'];
+                $phone = $_POST['phone'];
+                $address = $_POST['address'];
+                $date = $_POST['date'];
+                $id_user = $_POST['id_user'];
+
+                try {
+                    insert_order($totalbill, $trangthai, $ho_ten, $email, $phone, $address, $date, $id_user);
+                    $sthongbao = "Thêm thành công";
+                } catch (Exception $e) {
+                    echo 'Caught exception: ',  $e->getMessage(), "\n";
+                }
+            }
+            $listuser = loadAll_user();
+            $listorder = loadAll_order();
+            include "order/add.php";
+            break;
+
+        case 'deletedh':                
+            if (isset($_GET['id']) && $_GET['id'] > 0) {
+                delete_order($_GET['id']);
+            }
+            $listorder = loadAll_order();
+            include "order/list.php";
+            break;
+
+>>>>>>> Stashed changes
         default:
             include "home.php";
             break;
@@ -184,4 +318,8 @@ if (isset($_GET['act'])) {
 }
 
 include "footer.php";
+<<<<<<< Updated upstream
 ?>--
+=======
+?>
+>>>>>>> Stashed changes

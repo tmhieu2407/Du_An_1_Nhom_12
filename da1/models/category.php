@@ -9,10 +9,13 @@
         pdo_execute($sql);
     }
     function loadAll_category(){
-        $sql="select * from catalog order by id_cata ASC"; 
+        $sql="select * from catalog order by id_cata desc"; 
         $listdm=pdo_query($sql);
         return $listdm;
     }
+    $listdm = loadAll_category();
+    // var_dump($listdm); // Kiểm tra xem có trả về dữ liệu không
+
     function loadOnce_category($id){
         $sql="select * from catalog where id_cata=".$id;
         $dm=pdo_query_one($sql);
