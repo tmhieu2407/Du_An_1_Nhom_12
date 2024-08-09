@@ -2969,3 +2969,18 @@ article .more-link a:hover:after {
   	   -moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.02);
   	        box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.02);
 }
+.product-item {
+    width: 24%; /* Điều chỉnh kích thước phù hợp với số lượng sản phẩm trên một hàng */
+    margin: 0.5%; /* Khoảng cách giữa các sản phẩm */
+    box-sizing: border-box; /* Đảm bảo padding và border không ảnh hưởng đến kích thước tổng thể */
+}
+
+.product-thumb img {
+    width: 100%; /* Ảnh sẽ chiếm toàn bộ chiều rộng của khung */
+    height: auto; /* Chiều cao tự động điều chỉnh theo chiều rộng */
+}
+
+.product-info {
+    text-align: center; /* Căn giữa thông tin sản phẩm */
+    padding: 10px; /* Khoảng cách xung quanh thông tin sản phẩm */
+}
