@@ -11,6 +11,12 @@ function delete_products($id_sp){
     pdo_execute($sql);
 }
 
+function loadAll_products_home(){
+    $sql="SELECT * FROM products WHERE 1 order by id_sp desc limit 0,9";
+    $listsp = pdo_query($sql);
+    return $listsp;
+}
+
 function loadAll_products($key, $id_cata){
     $sql = "SELECT * FROM products WHERE 1";
     if($key != ""){
